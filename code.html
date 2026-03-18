@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Lazer Terra Verde | Seu Refúgio Urbano</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-highest": "#e8e2d7",
+              "outline-variant": "#bfc9c2",
+              "inverse-on-surface": "#f7f0e5",
+              "primary-fixed-dim": "#8fd5b7",
+              "on-tertiary": "#ffffff",
+              "surface-container": "#f4ede2",
+              "surface-tint": "#236a52",
+              "on-surface-variant": "#3f4944",
+              "error-container": "#ffdad6",
+              "surface-variant": "#e8e2d7",
+              "on-error-container": "#93000a",
+              "primary-container": "#145f48",
+              "secondary": "#25638c",
+              "secondary-fixed": "#cbe6ff",
+              "on-tertiary-container": "#b2d648",
+              "on-primary-container": "#91d6b9",
+              "tertiary-container": "#475b00",
+              "primary-fixed": "#aaf1d3",
+              "on-tertiary-fixed": "#161f00",
+              "surface-container-high": "#eee7dc",
+              "on-primary": "#ffffff",
+              "inverse-surface": "#333029",
+              "surface": "#fff8f0",
+              "error": "#ba1a1a",
+              "surface-dim": "#e0d9ce",
+              "background": "#fff8f0",
+              "surface-container-low": "#faf3e8",
+              "inverse-primary": "#8fd5b7",
+              "on-secondary-fixed-variant": "#004b71",
+              "secondary-container": "#97cffe",
+              "tertiary-fixed": "#ccf15f",
+              "on-secondary-container": "#165981",
+              "primary": "#004633",
+              "on-primary-fixed": "#002116",
+              "tertiary-fixed-dim": "#b0d446",
+              "on-error": "#ffffff",
+              "on-secondary": "#ffffff",
+              "outline": "#6f7974",
+              "on-surface": "#1e1b15",
+              "tertiary": "#334200",
+              "secondary-fixed-dim": "#95ccfb",
+              "on-tertiary-fixed-variant": "#3b4d00",
+              "surface-container-lowest": "#ffffff",
+              "on-primary-fixed-variant": "#00513c",
+              "on-secondary-fixed": "#001e30",
+              "on-background": "#1e1b15",
+              "surface-bright": "#fff8f0"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .tonal-shift-bg {
+        background: linear-gradient(to bottom, rgba(255, 248, 240, 0.9), rgba(255, 248, 240, 0.7));
+      }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#fff8f0]/80 backdrop-blur-xl shadow-[0px_20px_40px_rgba(30,27,21,0.06)]">
+<div class="flex justify-between items-center px-8 py-4 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-bold tracking-tighter text-[#145F48] font-headline">
+                Lazer Terra Verde
+            </div>
+<div class="hidden md:flex items-center gap-8 font-headline font-medium tracking-tight text-[#145F48]/70">
+<a class="text-[#145F48] border-b-2 border-[#145F48] pb-1 hover:opacity-80 transition-all" href="#espaco">Espaço</a>
+<a class="hover:text-[#145F48] transition-all" href="#comodidades">Comodidades</a>
+<a class="hover:text-[#145F48] transition-all" href="#galeria">Galeria</a>
+<a class="hover:text-[#145F48] transition-all" href="#precos">Preços</a>
+<a class="hover:text-[#145F48] transition-all" href="#regras">Regras</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-headline font-semibold text-sm hover:opacity-90 active:scale-95 transition-all">
+                Reservar Agora
+            </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative h-screen flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Resort de luxo com piscina e jardim" class="w-full h-full object-cover" data-alt="Luxurious modern house with a crystal clear pool at sunset" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7UJByPXep3nQWYUNYSfIyBpyl7URkG8aWuAbVEnR-DVL_m_ImxKU2XM-bxGBRUX5NmXyx2zPwSAdZUZFtaIjKrSxUt8mS6Xo--N3WKGTolPO4d2LL8cC50H8CVpVKu5kBUl0B47ms6xOE4XeMV_qcQSFub1GgL94cgBx20ho6pa4rDvvC0iMDLpONBQ-63tBgzcNdDeoD4hbt_zJ5UKsjlvJ5bR_4X-HWVhtqlzwytcIr8FIB5EaO2ihTAp2l9zJOACYW5XKf1JX5"/>
+<div class="absolute inset-0 bg-gradient-to-b from-primary/40 to-primary-container/80"></div>
+</div>
+<div class="relative z-10 text-center px-6 max-w-4xl">
+<img alt="Logo Concept" class="w-24 h-24 mx-auto mb-8 rounded-full border-2 border-tertiary-fixed object-cover" data-alt="Elegant minimalist architectural logo symbol" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDi9CIzB3dhuvc-p-TGid_NFhU74iyrdsefPRTomWMErtszX2_SdcL1OmBH0SjlBETdYiTz7x4DNrm2ppne_f2VGCe4bHVQKaNmES9MCT3KCPspcGcEhugjmiTWCING5zzkpBzOXoJUHa1_kxP2audjMdbJkDPXl1PggRrULi6fNbqD-H2sFdu_3opDrL_LmRIJ5VHSy3iyIpqnDyhZE-W83CGYllG_wUE-l4_VyRoT6QtIHcmZW6jknC57nbQqVpHNPj83iumq9ec1"/>
+<h1 class="text-5xl md:text-8xl font-headline font-extrabold text-white tracking-tighter leading-tight mb-6">
+                Seu Refúgio Urbano de Lazer
+            </h1>
+<p class="text-xl md:text-2xl text-on-primary-container/90 mb-10 font-medium max-w-2xl mx-auto">
+                Arquitetura moderna e natureza em harmonia para seus momentos inesquecíveis.
+            </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<a class="bg-tertiary-fixed text-on-tertiary-fixed px-10 py-5 rounded-full font-headline font-bold text-lg hover:opacity-90 active:scale-95 transition-all shadow-xl" href="#precos">
+                    Reserve sua Data
+                </a>
+<a class="bg-white/10 backdrop-blur-md border border-white/20 text-white px-10 py-5 rounded-full font-headline font-bold text-lg hover:bg-white/20 transition-all" href="#galeria">
+                    Explorar Espaço
+                </a>
+</div>
+</div>
+</header>
+<!-- Sobre o Espaço (Amenities) -->
+<section class="py-32 px-8 bg-surface" id="comodidades">
+<div class="max-w-screen-2xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div>
+<span class="font-label text-primary font-bold tracking-widest uppercase text-sm">O que oferecemos</span>
+<h2 class="text-4xl md:text-6xl font-headline font-extrabold text-on-surface mt-4 mb-8 leading-tight">
+                        Conforto Editorial em cada detalhe.
+                    </h2>
+<p class="text-lg text-on-surface-variant leading-relaxed mb-12 max-w-xl">
+                        Desenhado para quem busca exclusividade. Nosso espaço combina a sofisticação de um estate contemporâneo com as facilidades que sua família merece.
+                    </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+<div class="flex items-start gap-4">
+<div class="bg-surface-container-highest p-4 rounded-xl text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">pool</span>
+</div>
+<div>
+<h4 class="font-headline font-bold text-on-surface">Piscina Aquecida</h4>
+<p class="text-sm text-on-surface-variant">Temperatura perfeita 24h por dia.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="bg-surface-container-highest p-4 rounded-xl text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">outdoor_grill</span>
+</div>
+<div>
+<h4 class="font-headline font-bold text-on-surface">Área Gourmet</h4>
+<p class="text-sm text-on-surface-variant">Churrasqueira profissional completa.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="bg-surface-container-highest p-4 rounded-xl text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">child_care</span>
+</div>
+<div>
+<h4 class="font-headline font-bold text-on-surface">Espaço Kids</h4>
+<p class="text-sm text-on-surface-variant">Diversão segura para os pequenos.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="bg-surface-container-highest p-4 rounded-xl text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">wifi</span>
+</div>
+<div>
+<h4 class="font-headline font-bold text-on-surface">Wi-Fi High Speed</h4>
+<p class="text-sm text-on-surface-variant">Conectividade em toda a área.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative">
+<div class="aspect-[4/5] rounded-[3rem] overflow-hidden shadow-2xl transform lg:translate-x-12">
+<img alt="Vista lateral da piscina" class="w-full h-full object-cover" data-alt="Close up of a turquoise luxury swimming pool" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDE7QpHPt9n7bksecgN6sNejQT7usP-rljYYB_2wLwI74Qo1d_9ppdQHHJhlDCUJKBKerYdMBglDjxOT4KkgLn_6ZUjl6KIaIghzJm3pm2ezE_2Tygw5oraF7cBYV4kFLXaOmtvYo9caS9O3wQKAFYlLYLis-_FiA-F8jgw7BywWGysSmJFbjFPKnn6DiyVDgRWVlZf-JEBreh8bggAaTnO_Q-fy2MQ2iQnMUay7WBE94K3f7OAK67aPCf3fs4j90yOpYGSFRsSC1AC"/>
+</div>
+<div class="absolute -bottom-12 -left-12 hidden md:block w-72 h-72 rounded-[2rem] overflow-hidden border-[12px] border-surface shadow-2xl">
+<img alt="Detalhe área gourmet" class="w-full h-full object-cover" data-alt="Modern outdoor kitchen and grilling area" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdPm2cvj7I6NP3BgY2-zzmerXTAYrYYqAUwci50hPVHtaZAU25E6gEwSR3Q6bhzvpvjDVKyJjlZoUdQ7C0Z3M2SwwDRjI2uI2RznpFjofFMWRTT1mG8KOFtQ2Ftid0BAVXLUWOxGlYlZarDn-cpkLtC2d167VwafSGBhXNYsd4qJ67ia2wr7li4oYsq0Xj0CUjy52WmSc4BbfiyMn6cm18FjA9H-gV5sJpP1XlJBunjMp3ACBZLVsc6DvwmVnaIn7Bj21PHAxecMv3"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Galeria (Leisure Carousel style) -->
+<section class="py-32 bg-surface-container-low overflow-hidden" id="galeria">
+<div class="px-8 max-w-screen-2xl mx-auto mb-16">
+<h2 class="text-4xl md:text-6xl font-headline font-extrabold text-on-surface tracking-tighter">Galeria de Experiências</h2>
+</div>
+<div class="flex gap-6 px-8 overflow-x-auto pb-12 snap-x no-scrollbar">
+<div class="flex-none w-[80vw] md:w-[600px] snap-center">
+<div class="aspect-video rounded-3xl overflow-hidden bg-surface-container-highest">
+<img alt="Fachada moderna" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" data-alt="Architectural wide shot of a luxury estate house" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA13SkJrovOIOSVNfdo3pKLeyXQgmC0wsHn2fevqO2h6e-kXcfkzxCEu63lkl0e5-hsQOgCfk9IN4aDfdansO-l2I6FioWtntIBzg6kfmmtvuaD05bYPTvafafyuCztdb4oFwFJFzpx-t4qZmpI_FMtIqWHPtu23kMv8U0Usn36TvwC5pyCc4cNcU1PeeWy5uQGsIY-Cr7nkJO19uQYkSCO2H62nwJcCdZabCvgVs-iAsejwkh4yZey9w05uE3RY-eZMqvPGgiov1sI"/>
+</div>
+</div>
+<div class="flex-none w-[60vw] md:w-[400px] snap-center mt-12">
+<div class="aspect-[3/4] rounded-3xl overflow-hidden bg-surface-container-highest">
+<img alt="Piscina noturna" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" data-alt="Modern swimming pool lit up at night" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbTwYCGm1t3sBVS8flR7wGqxWHCl_wHDBAcDTS9zFrzXiQKJKBjFCDZf0UAw_KgUr3RCf6fiQ6drBEGw9ZjLJDAp2QxhGh0k_mbw_ukzjPtp_pCqqMLza4rzVWMyF93zmjfwSa_Q70DBdjnXGiH2I6HDWiD1j-pihgRyvUBZrIvI25EKVi5MNzlpxanaZ8xf5QYLFbxO6iBXlJZYRpFHZB6SCA9CncKydwNZ0Gh3v0m2Jdf72oMhm4P379tlmwLXgKuTcf9FhRd76v"/>
+</div>
+</div>
+<div class="flex-none w-[80vw] md:w-[500px] snap-center">
+<div class="aspect-square rounded-3xl overflow-hidden bg-surface-container-highest">
+<img alt="Área interna lounge" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" data-alt="Interior luxury lounge with large glass windows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHlE6Vm3us4LNqqM_ol3xLv3eQsa_Z0gfBRqs0RhJk_Eef5XnHjGgFvKehf3WH2lMaGa5UQBPYnHCnWc9VRm76dSgx_A9pyc3_aDGxXgZU94fbtvKgBY0CP1-dFtFE9GmFCvtCaP758Chd_zcOF-cCwmvsv4wyTWd-Tu0TNZRhKek6K72OZx5WI8LgGPzR2vgZwK8HyJVe2zP_t7HUuENxy_hbYeJg5Uj_bsHgdVmkYnWo4vkUJDo2h5wukekdnsxIRJMuy4rpI_G5"/>
+</div>
+</div>
+<div class="flex-none w-[60vw] md:w-[400px] snap-center mt-24">
+<div class="aspect-[4/5] rounded-3xl overflow-hidden bg-surface-container-highest">
+<img alt="Jardim e deck" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" data-alt="Lush green garden with wooden deck chairs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQp-697OA2DItQG3fUIQQvrJAVkvy9urtHAvnz88wUFtXTuxvKb4_VdB2o24Qbb9hQtY5wFEqaC8I8_82QaogWdkAbwQelVVXjlmyAIfNWBFUyNI9TdXBjE1kFN6dLeFs3FyY1MAieJIldJXwdZzy3OSLEe_OkA6OMJ4E43OG9Dxi_MkMXeQRaCISzNeJHzhBh1ROFeIaXdiXqaFTFGHWK8LqPrcPVdMtu8OUCJ1xJJ14K45AqhTSUzjn4k9MFwg3zblNPmowiUuPb"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Preços e Disponibilidade -->
+<section class="py-32 px-8 bg-surface" id="precos">
+<div class="max-w-screen-2xl mx-auto">
+<div class="flex flex-col lg:flex-row gap-16">
+<div class="flex-1">
+<span class="font-label text-secondary font-bold tracking-widest uppercase text-sm">Investimento &amp; Tempo</span>
+<h2 class="text-4xl md:text-5xl font-headline font-extrabold text-on-surface mt-4 mb-6">Valores e Disponibilidade</h2>
+<div class="bg-surface-container-low p-8 rounded-3xl mb-8">
+<p class="text-sm text-on-surface-variant uppercase font-bold tracking-tighter mb-2">A partir de</p>
+<div class="flex items-baseline gap-2">
+<span class="text-5xl font-headline font-extrabold text-primary">R$ 500</span>
+<span class="text-on-surface-variant font-medium">/ diária</span>
+</div>
+<p class="mt-6 text-on-surface-variant text-sm">*Valores variam de acordo com a temporada e número de convidados. Consulte pacotes especiais para eventos.</p>
+</div>
+<div class="space-y-4">
+<div class="flex items-center justify-between p-4 bg-surface-container-highest/50 rounded-xl">
+<span class="font-medium">Segunda a Quinta</span>
+<span class="font-bold text-primary">R$ 500/dia</span>
+</div>
+<div class="flex items-center justify-between p-4 bg-surface-container-highest/50 rounded-xl">
+<span class="font-medium">Sexta a Domingo</span>
+<span class="font-bold text-primary">R$ 850/dia</span>
+</div>
+<div class="flex items-center justify-between p-4 bg-surface-container-highest/50 rounded-xl">
+<span class="font-medium">Feriados e Datas Especiais</span>
+<span class="font-bold text-primary">Sob consulta</span>
+</div>
+</div>
+</div>
+<div class="flex-1 bg-surface-container-lowest p-8 rounded-[2.5rem] shadow-[0px_20px_40px_rgba(30,27,21,0.06)]">
+<div class="flex items-center justify-between mb-8">
+<h3 class="font-headline font-bold text-xl">Outubro 2024</h3>
+<div class="flex gap-2">
+<button class="p-2 hover:bg-surface-container rounded-full transition-colors"><span class="material-symbols-outlined">chevron_left</span></button>
+<button class="p-2 hover:bg-surface-container rounded-full transition-colors"><span class="material-symbols-outlined">chevron_right</span></button>
+</div>
+</div>
+<div class="grid grid-cols-7 gap-2 mb-4 text-center">
+<div class="text-xs font-bold text-on-surface-variant/50">DOM</div>
+<div class="text-xs font-bold text-on-surface-variant/50">SEG</div>
+<div class="text-xs font-bold text-on-surface-variant/50">TER</div>
+<div class="text-xs font-bold text-on-surface-variant/50">QUA</div>
+<div class="text-xs font-bold text-on-surface-variant/50">QUI</div>
+<div class="text-xs font-bold text-on-surface-variant/50">SEX</div>
+<div class="text-xs font-bold text-on-surface-variant/50">SÁB</div>
+</div>
+<div class="grid grid-cols-7 gap-2 text-center">
+<!-- Simplified Calendar Visualization -->
+<div class="p-3 text-on-surface-variant/30">29</div>
+<div class="p-3 text-on-surface-variant/30">30</div>
+<div class="p-3 font-bold bg-surface-container-high rounded-xl">1</div>
+<div class="p-3 font-bold bg-surface-container-high rounded-xl">2</div>
+<div class="p-3 font-bold bg-surface-container-high rounded-xl">3</div>
+<div class="p-3 font-bold bg-error-container text-on-error-container rounded-xl line-through">4</div>
+<div class="p-3 font-bold bg-error-container text-on-error-container rounded-xl line-through">5</div>
+<div class="p-3 font-bold bg-error-container text-on-error-container rounded-xl line-through">6</div>
+<div class="p-3 font-bold bg-surface-container-high rounded-xl">7</div>
+<div class="p-3 font-bold bg-surface-container-high rounded-xl">8</div>
+<div class="p-3 font-bold bg-surface-container-high rounded-xl">9</div>
+<div class="p-3 font-bold bg-surface-container-high rounded-xl">10</div>
+<div class="p-3 font-bold bg-primary text-white rounded-xl ring-4 ring-primary/20">11</div>
+<div class="p-3 font-bold bg-surface-container-high rounded-xl">12</div>
+<!-- ... rest of calendar ... -->
+<div class="p-3 font-bold bg-surface-container-high rounded-xl">13</div>
+<div class="p-3 font-bold bg-surface-container-high rounded-xl">14</div>
+<div class="p-3 font-bold bg-surface-container-high rounded-xl">15</div>
+<div class="p-3 font-bold bg-surface-container-high rounded-xl">16</div>
+<div class="p-3 font-bold bg-surface-container-high rounded-xl">17</div>
+<div class="p-3 font-bold bg-error-container text-on-error-container rounded-xl line-through">18</div>
+<div class="p-3 font-bold bg-error-container text-on-error-container rounded-xl line-through">19</div>
+</div>
+<div class="mt-8 flex gap-6 text-xs font-bold">
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 bg-surface-container-high rounded-full"></div>
+<span>DISPONÍVEL</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 bg-error-container rounded-full"></div>
+<span>RESERVADO</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Avaliações -->
+<section class="py-32 px-8 bg-surface-container-low">
+<div class="max-w-screen-2xl mx-auto">
+<h2 class="text-4xl md:text-5xl font-headline font-extrabold text-on-surface text-center mb-20 tracking-tight">O que dizem nossos hóspedes</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-white p-10 rounded-[2.5rem] shadow-[0px_20px_40px_rgba(30,27,21,0.04)]">
+<div class="flex text-tertiary-fixed-dim mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-lg italic text-on-surface-variant mb-8 leading-relaxed">"Lugar impecável! A piscina aquecida fez toda a diferença para as crianças. A estrutura é de cinema."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest overflow-hidden">
+<img alt="User" data-alt="Portrait of a smiling woman" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBBUHxVOF0L88D2Um56H8KXONKgVkKyhNIwPv-3Ro3Fy5auEwoCSCOxc72ZHXXP8ZHiczwnxPw7DCOZgBNrD9wwibE3EMcNV7OrIBv6uUZefom1yyaw5wY-kPnRXiwd6HCdcor3CF_wc2AD0jz875IMoQEvv_Bfo2t_VgK2SzUlwjIIrOdNI2apxqTvSnD61mwolGKIkD2s4zFaHBQamPO3ZaPW2qZuFsUMY2802sSzqzFa5Np5wEIphg2_yi0w4zD9ZLKXuJILY0q"/>
+</div>
+<div>
+<p class="font-bold text-on-surface">Mariana Silva</p>
+<p class="text-xs text-on-surface-variant uppercase tracking-widest">Empresária</p>
+</div>
+</div>
+</div>
+<div class="bg-white p-10 rounded-[2.5rem] shadow-[0px_20px_40px_rgba(30,27,21,0.04)] md:translate-y-8">
+<div class="flex text-tertiary-fixed-dim mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-lg italic text-on-surface-variant mb-8 leading-relaxed">"Comemorei meu aniversário e foi perfeito. A área gourmet é muito completa e o espaço é muito privativo."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest overflow-hidden">
+<img alt="User" data-alt="Portrait of a smiling man" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAY3LnZzmevwtgkJ952IcVtxduEu7tB9f11Py-5Z0YGkySHoUTnbdJRSr0Kmyd5vAPDWSo1M0Fous3uVHTdn5putezJKx5fQiNbFyBUIyTsDqj0JxjD2tQTF3rSDXFj0QRvMZQaFvUvAicCRHu_N2XBgDEdMoa6hGqBKSRlGixN3VsfCQ-T16Djx2FX7bIINygyaPZ6qNHW_v0hlLYMv9z73jS0x6KBnki6vuD4C8LT9xEHBJSzKEg747D1BmkGQTiNZouKwskbk_pU"/>
+</div>
+<div>
+<p class="font-bold text-on-surface">Ricardo Mendonça</p>
+<p class="text-xs text-on-surface-variant uppercase tracking-widest">Arquiteto</p>
+</div>
+</div>
+</div>
+<div class="bg-white p-10 rounded-[2.5rem] shadow-[0px_20px_40px_rgba(30,27,21,0.04)]">
+<div class="flex text-tertiary-fixed-dim mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-lg italic text-on-surface-variant mb-8 leading-relaxed">"O atendimento é excepcional e o espaço estava brilhando. Recomendo para famílias que buscam sossego."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest overflow-hidden">
+<img alt="User" data-alt="Portrait of a smiling woman in nature" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQb0HeW_TQ7FjcX8bhTh86lvrx3i3L3fHIYi_jJm-c7p4L50kl5ydGsTDsvi49EVhq2cUDvPIdIDoZMqjel6HtZzAcIVXmNt-x_Jb1J-7jTyyeI92dd6R_Nl6JStULTIWcYN676Cwa4iZ22BZspyaDPU32EfsxoPtiZss6Vy-W30fC9uQFQIK67wh1aoOioNd83jBuqmDc0XAZyvF2yMZ3DJqGp_XQgXmAHofXXCMJvV7DqtIsum7Ua6NkgIM7P0THdx8IbI9cT3fD"/>
+</div>
+<div>
+<p class="font-bold text-on-surface">Ana Luiza Costa</p>
+<p class="text-xs text-on-surface-variant uppercase tracking-widest">Designer</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Regras da Casa -->
+<section class="py-32 px-8 bg-surface" id="regras">
+<div class="max-w-4xl mx-auto">
+<div class="text-center mb-16">
+<span class="font-label text-primary font-bold tracking-widest uppercase text-sm">Bom Convívio</span>
+<h2 class="text-4xl font-headline font-extrabold text-on-surface mt-4">Regras da Casa</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-8">
+<div class="flex items-center gap-4 p-6 bg-surface-container-low rounded-2xl">
+<span class="material-symbols-outlined text-primary">smoke_free</span>
+<span class="font-medium text-on-surface">Proibido fumar em áreas internas</span>
+</div>
+<div class="flex items-center gap-4 p-6 bg-surface-container-low rounded-2xl">
+<span class="material-symbols-outlined text-primary">groups</span>
+<span class="font-medium text-on-surface">Capacidade máxima: 50 pessoas</span>
+</div>
+<div class="flex items-center gap-4 p-6 bg-surface-container-low rounded-2xl">
+<span class="material-symbols-outlined text-primary">volume_off</span>
+<span class="font-medium text-on-surface">Lei do silêncio após às 22h</span>
+</div>
+<div class="flex items-center gap-4 p-6 bg-surface-container-low rounded-2xl">
+<span class="material-symbols-outlined text-primary">pets</span>
+<span class="font-medium text-on-surface">Aceitamos pets de pequeno porte</span>
+</div>
+<div class="flex items-center gap-4 p-6 bg-surface-container-low rounded-2xl">
+<span class="material-symbols-outlined text-primary">cleaning_services</span>
+<span class="font-medium text-on-surface">Taxa de limpeza inclusa</span>
+</div>
+<div class="flex items-center gap-4 p-6 bg-surface-container-low rounded-2xl">
+<span class="material-symbols-outlined text-primary">verified_user</span>
+<span class="font-medium text-on-surface">Respeite a vizinhança local</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-32 px-8 relative overflow-hidden">
+<div class="absolute inset-0 bg-primary-container z-0"></div>
+<div class="relative z-10 max-w-4xl mx-auto text-center text-white">
+<h2 class="text-5xl md:text-7xl font-headline font-extrabold mb-8 tracking-tighter">Pronto para relaxar?</h2>
+<p class="text-xl md:text-2xl text-on-primary-container/80 mb-12">Estamos aguardando seu contato para tornar seu próximo evento especial.</p>
+<a class="inline-flex items-center gap-4 bg-[#25D366] text-white px-12 py-6 rounded-full font-headline font-extrabold text-xl hover:scale-105 active:scale-95 transition-all shadow-2xl" href="#">
+<span>Falar no WhatsApp</span>
+<span class="material-symbols-outlined">chat_bubble</span>
+</a>
+<div class="mt-20 flex flex-wrap justify-center gap-12 opacity-50 text-sm font-label uppercase tracking-widest">
+<span>Espaço Privativo</span>
+<span>Atendimento VIP</span>
+<span>Qualidade Premium</span>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full py-12 bg-[#faf3e8]">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 gap-8 max-w-screen-2xl mx-auto">
+<div class="text-xl font-bold text-[#145F48] font-headline">
+                Lazer Terra Verde
+            </div>
+<div class="flex flex-wrap justify-center gap-8 text-[#145F48]/60 font-['Manrope'] text-sm uppercase tracking-widest">
+<a class="hover:text-[#145F48] underline-offset-4 hover:underline transition-all" href="#">Termos de Uso</a>
+<a class="hover:text-[#145F48] underline-offset-4 hover:underline transition-all" href="#">Privacidade</a>
+<a class="hover:text-[#145F48] underline-offset-4 hover:underline transition-all" href="#">Contato</a>
+<a class="hover:text-[#145F48] underline-offset-4 hover:underline transition-all" href="#">Localização</a>
+</div>
+<div class="text-[#145F48]/60 font-['Manrope'] text-sm uppercase tracking-widest text-center md:text-right">
+                © 2024 Lazer Terra Verde. A experiência do Modern Estate.
+            </div>
+</div>
+</footer>
+</body></html>
