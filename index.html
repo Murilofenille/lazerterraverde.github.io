@@ -1,437 +1,2432 @@
 <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Murilabs — Performance Inteligente</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
-<html class="scroll-smooth" lang="pt-BR"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Lazer Terra Verde | Seu Refúgio Urbano</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              "surface-container-highest": "#e8e2d7",
-              "outline-variant": "#bfc9c2",
-              "inverse-on-surface": "#f7f0e5",
-              "primary-fixed-dim": "#8fd5b7",
-              "on-tertiary": "#ffffff",
-              "surface-container": "#f4ede2",
-              "surface-tint": "#236a52",
-              "on-surface-variant": "#3f4944",
-              "error-container": "#ffdad6",
-              "surface-variant": "#e8e2d7",
-              "on-error-container": "#93000a",
-              "primary-container": "#145f48",
-              "secondary": "#25638c",
-              "secondary-fixed": "#cbe6ff",
-              "on-tertiary-container": "#b2d648",
-              "on-primary-container": "#91d6b9",
-              "tertiary-container": "#475b00",
-              "primary-fixed": "#aaf1d3",
-              "on-tertiary-fixed": "#161f00",
-              "surface-container-high": "#eee7dc",
-              "on-primary": "#ffffff",
-              "inverse-surface": "#333029",
-              "surface": "#fff8f0",
-              "error": "#ba1a1a",
-              "surface-dim": "#e0d9ce",
-              "background": "#fff8f0",
-              "surface-container-low": "#faf3e8",
-              "inverse-primary": "#8fd5b7",
-              "on-secondary-fixed-variant": "#004b71",
-              "secondary-container": "#97cffe",
-              "tertiary-fixed": "#ccf15f",
-              "on-secondary-container": "#165981",
-              "primary": "#004633",
-              "on-primary-fixed": "#002116",
-              "tertiary-fixed-dim": "#b0d446",
-              "on-error": "#ffffff",
-              "on-secondary": "#ffffff",
-              "outline": "#6f7974",
-              "on-surface": "#1e1b15",
-              "tertiary": "#334200",
-              "secondary-fixed-dim": "#95ccfb",
-              "on-tertiary-fixed-variant": "#3b4d00",
-              "surface-container-lowest": "#ffffff",
-              "on-primary-fixed-variant": "#00513c",
-              "on-secondary-fixed": "#001e30",
-              "on-background": "#1e1b15",
-              "surface-bright": "#fff8f0"
-            },
-            fontFamily: {
-              "headline": ["Plus Jakarta Sans"],
-              "body": ["Manrope"],
-              "label": ["Manrope"]
-            },
-            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
-          },
-        },
+  <style>
+    /* ===================================
+       MURILABS — STYLESHEET v3
+       Dark · Premium · Unified
+       =================================== */
+
+    :root {
+      --bg:       #060810;
+      --bg-2:     #0a0d18;
+      --bg-3:     #0f1220;
+      --surface:  rgba(255,255,255,0.04);
+      --border:   rgba(255,255,255,0.08);
+      --border-strong: rgba(255,255,255,0.15);
+      --text:     #ffffff;
+      --text-2:   rgba(255,255,255,0.6);
+      --text-3:   rgba(255,255,255,0.35);
+      --blue:     #1E90FF;
+      --teal:     #00FFB2;
+      --purple:   #7B61FF;
+      --cyan:     #00D4FF;
+      --orange:   #FF6B35;
+      --green:    #4ADE80;
+      --yellow:   #FACC15;
+      --lilac:    #C4ACFF;
+      --core:     #FF6B35;
+      --next:     #1E90FF;
+      --pure:     #4ADE80;
+      --hydrate:  #38BDF8;
+      --mind:     #A78BFA;
+      --pro:      #FACC15;
+      --font: 'Montserrat', sans-serif;
+      --ease: cubic-bezier(0.22, 1, 0.36, 1);
+      --page-px: 5vw;
+    }
+
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;overflow-x:hidden;width:100%;max-width:100vw;}
+    body{font-family:var(--font);background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;overflow-x:hidden;width:100%;max-width:100vw;position:relative;}
+    a{text-decoration:none;color:inherit}
+    button{cursor:pointer;border:none;background:none;font-family:var(--font)}
+    ul{list-style:none}
+    img{display:block;max-width:100%}
+
+    .page{display:none;animation:fadeIn .4s var(--ease)}
+    .page.active{display:block}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+
+    /* NAV */
+    .nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;padding:0 var(--page-px);height:68px;background:rgba(6,8,16,0.85);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid var(--border)}
+    .nav-logo{font-size:1.2rem;font-weight:900;letter-spacing:-0.03em;color:var(--text)}
+    .dot{color:var(--blue)}
+    .nav-links{display:flex;gap:36px;align-items:center}
+    .nav-links a{font-size:0.82rem;font-weight:500;color:var(--text-2);letter-spacing:0.02em;transition:color .2s}
+    .nav-links a:hover{color:var(--text)}
+    .nav-cta{font-size:0.78rem;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;color:var(--text);border:1px solid var(--border-strong);padding:9px 22px;border-radius:100px;transition:all .22s var(--ease);background:var(--surface)}
+    .nav-cta:hover{background:var(--text);color:var(--bg);border-color:var(--text)}
+    .hamburger{display:none;flex-direction:column;gap:5px;padding:8px}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px;transition:all .3s}
+    .mobile-menu{display:none;position:fixed;top:68px;left:0;right:0;background:var(--bg-2);border-bottom:1px solid var(--border);z-index:999;flex-direction:column;padding:20px var(--page-px) 28px;gap:4px}
+    .mobile-menu.open{display:flex}
+    .mobile-menu a{font-size:1rem;font-weight:600;color:var(--text-2);padding:12px 0;border-bottom:1px solid var(--border);transition:color .2s}
+    .mobile-menu a:hover{color:var(--text)}
+
+    /* SHARED */
+    .section-label{font-size:0.68rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--text-3);margin-bottom:16px}
+    .section-title{font-size:clamp(2rem,4vw,3.2rem);font-weight:900;letter-spacing:-0.03em;line-height:1.1;color:var(--text);margin-bottom:60px}
+
+    /* BUTTONS */
+    .btn-primary{font-family:var(--font);font-size:0.82rem;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;background:var(--text);color:var(--bg);padding:14px 32px;border-radius:100px;transition:all .25s var(--ease);border:none;cursor:pointer}
+    .btn-primary:hover{background:var(--blue);color:var(--text);transform:translateY(-2px);box-shadow:0 12px 32px rgba(30,144,255,0.35)}
+    .btn-ghost{font-family:var(--font);font-size:0.82rem;font-weight:600;color:var(--text-2);padding:14px 0;background:none;border:none;cursor:pointer;transition:color .2s}
+    .btn-ghost:hover{color:var(--text)}
+    .btn-outline{font-family:var(--font);font-size:0.78rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--text);border:1px solid var(--border-strong);padding:12px 28px;border-radius:100px;background:var(--surface);cursor:pointer;transition:all .22s var(--ease)}
+    .btn-outline:hover{background:var(--text);color:var(--bg);border-color:var(--text)}
+
+
+    /* HERO */
+    .hero{min-height:100vh;display:flex;flex-direction:column;position:relative;overflow:hidden;background:var(--bg);padding-top:68px}
+    .hero-bg{position:absolute;inset:0;pointer-events:none;z-index:0}
+    .hero-glow{position:absolute;border-radius:50%;filter:blur(110px)}
+    .hero-glow--1{width:650px;height:650px;background:rgba(30,144,255,0.16);top:-150px;left:-150px;animation:glowDrift1 14s ease-in-out infinite}
+    .hero-glow--2{width:450px;height:450px;background:rgba(123,97,255,0.12);bottom:80px;right:-100px;animation:glowDrift2 17s ease-in-out infinite}
+    .hero-glow--3{width:280px;height:280px;background:rgba(0,255,178,0.07);top:55%;left:55%;animation:glowDrift1 11s ease-in-out infinite 3s}
+    .hero-grid-lines{position:absolute;inset:0;background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);background-size:72px 72px;mask-image:radial-gradient(ellipse at 50% 40%,black 20%,transparent 70%);opacity:0.5}
+    @keyframes glowDrift1{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(50px,35px) scale(1.12)}}
+    @keyframes glowDrift2{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-35px,-45px) scale(1.09)}}
+
+    .hero-inner{position:relative;z-index:1;max-width:860px;margin:0 auto;padding:90px var(--page-px) 70px;text-align:center;display:flex;flex-direction:column;align-items:center;flex:1;justify-content:center}
+    .hero-top{margin-bottom:28px;animation:fadeUp .6s var(--ease) both}
+    .hero-tag{display:inline-block;font-size:0.68rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--text-3);border:1px solid var(--border);padding:7px 16px;border-radius:100px;background:var(--surface)}
+    .hero-title{display:flex;flex-direction:column;align-items:center;font-size:clamp(2.5rem,8.5vw,8.5rem);font-weight:900;letter-spacing:-0.045em;line-height:0.93;margin-bottom:32px}
+    .ht-line{display:block;white-space:nowrap}
+    .ht-line--1{color:var(--text-3);animation:fadeUp .6s var(--ease) .1s both}
+    .ht-line--2{background:linear-gradient(100deg,#fff 25%,var(--blue) 65%,var(--purple) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:fadeUp .6s var(--ease) .2s both}
+    .ht-dot{background:linear-gradient(135deg,var(--teal),var(--blue));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .hero-sub{font-size:1.05rem;color:var(--text-2);line-height:1.8;max-width:520px;margin-bottom:44px;animation:fadeUp .6s var(--ease) .3s both}
+    .hero-cta{display:flex;align-items:center;gap:16px;margin-bottom:68px;animation:fadeUp .6s var(--ease) .4s both}
+    .btn-hero-primary{display:inline-flex;align-items:center;gap:10px;background:var(--text);color:var(--bg);font-size:0.88rem;font-weight:800;letter-spacing:0.01em;padding:15px 30px;border-radius:100px;cursor:pointer;border:none;font-family:var(--font);transition:all 0.2s ease}
+    .btn-hero-primary:hover{background:#ddeeff;transform:translateY(-2px);box-shadow:0 14px 44px rgba(30,144,255,0.28)}
+    .btn-arrow{transition:transform 0.2s}
+    .btn-hero-primary:hover .btn-arrow{transform:translateX(4px)}
+    .btn-hero-ghost{font-size:0.88rem;font-weight:600;color:var(--text-2);background:none;border:none;font-family:var(--font);cursor:pointer;padding:15px 8px;transition:color 0.2s}
+    .btn-hero-ghost:hover{color:var(--text)}
+    .hero-stats{display:flex;align-items:center;gap:44px;animation:fadeUp .6s var(--ease) .5s both}
+    .hstat{display:flex;flex-direction:column;align-items:center;gap:5px}
+    .hstat-num{font-size:1.9rem;font-weight:900;color:var(--text);letter-spacing:-0.03em;line-height:1}
+    .hstat-plus{font-size:1.1rem;color:var(--blue)}
+    .hstat-label{font-size:0.64rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-3)}
+    .hstat-div{width:1px;height:34px;background:var(--border)}
+
+
+    /* LINES SECTION */
+    /* subtle ambient glow behind cards */
+
+
+    /* color tokens per line */
+    :root{
+      --c-core:   #6B8CFF;
+      --c-next:   #3B9EFF;
+      --c-pure:   #3ECFA4;
+      --c-hydrate:#38C8F0;
+      --c-mind:   #A78BFA;
+      --c-pro:    #FF7A59;
+    }
+
+
+    /* glass shine at top */
+
+    /* large background icon */
+
+
+    /* color accent strip at bottom edge */
+
+
+
+    /* color pill badge replacing the dot */
+
+    .lc-product:hover{color: var(--text); transform: translateX(4px);}
+
+
+
+    /* FEATURED */
+    .featured-section { padding: 80px 0 60px; background: linear-gradient(to bottom, #100d20 0%, #060810 200px); }
+    .featured-header { display:flex; align-items:baseline; justify-content:space-between; margin-bottom:36px; padding:0 var(--page-px); }
+    .featured-header h2 { font-size:clamp(2rem,4vw,3.2rem); font-weight:900; letter-spacing:-0.035em; color:#fff; }
+    .featured-header-link { font-size:0.82rem; font-weight:600; color:rgba(255,255,255,0.35); cursor:pointer; transition:color .2s; white-space:nowrap; }
+    .featured-header-link:hover { color:#fff; }
+    .featured-carousel-wrapper { position:relative; }
+    .carousel-btn { display:none; }
+
+    /* scroll row */
+    .frow {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 20px;
+      padding: 4px var(--page-px) 36px;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+    .frow::-webkit-scrollbar { display:none; }
+
+    /* individual card */
+    .fcard {
+      flex-shrink: 0;
+      flex-grow: 0;
+      flex-basis: 260px;
+      width: 260px;
+      scroll-snap-align: start;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.04);
+      cursor: pointer;
+      transition: transform .3s var(--ease), border-color .3s, box-shadow .3s;
+    }
+    .fcard:hover { transform: translateY(-6px); }
+    .fcard[data-glow="core"]:hover   { border-color:rgba(96,165,250,0.4);  box-shadow:0 20px 48px rgba(96,165,250,0.15); }
+    .fcard[data-glow="pure"]:hover   { border-color:rgba(74,222,128,0.4);  box-shadow:0 20px 48px rgba(74,222,128,0.15); }
+    .fcard[data-glow="mind"]:hover   { border-color:rgba(167,139,250,0.4); box-shadow:0 20px 48px rgba(167,139,250,0.15); }
+    .fcard[data-glow="hydrate"]:hover{ border-color:rgba(56,189,248,0.4);  box-shadow:0 20px 48px rgba(56,189,248,0.15); }
+
+    /* image area */
+    .fcard-top {
+      width: 260px;
+      height: 260px;
+      position: relative;
+      overflow: hidden;
+    }
+    .fcard-top img {
+      width: 260px;
+      height: 260px;
+      object-fit: cover;
+      display: block;
+    }
+    .fcard-top.bg-dark   { background: linear-gradient(145deg,#0f1628,#1a2040); }
+    .fcard-top.bg-green  { background: linear-gradient(145deg,#071a0f,#0d2d18); }
+    .fcard-top.bg-purple { background: linear-gradient(145deg,#110d24,#1c1438); }
+    .fcard-top.bg-cyan   { background: linear-gradient(145deg,#071520,#0d2538); }
+
+    .fcard-badge {
+      position: absolute; top:14px; left:14px; z-index:2;
+      font-size:0.6rem; font-weight:800; letter-spacing:0.1em; text-transform:uppercase;
+      color:#fff; background:var(--orange);
+      padding:5px 11px; border-radius:100px;
+    }
+    .fcard-badge.b-blue   { background:var(--blue); }
+    .fcard-badge.b-purple { background:var(--purple); }
+    .fcard-badge.b-cyan   { background:var(--cyan); color:#000; }
+    .fcard-badge.b-green  { background:var(--green); color:#000; }
+
+    /* text area */
+    .fcard-bot {
+      padding: 18px 20px 20px;
+      border-top: 1px solid rgba(255,255,255,0.07);
+    }
+    .fcard-line  { display:block; font-size:0.6rem; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:rgba(255,255,255,0.3); margin-bottom:5px; }
+    .fcard-name  { display:block; font-size:1rem; font-weight:800; color:#fff; letter-spacing:-0.02em; margin-bottom:5px; }
+    .fcard-desc  { display:block; font-size:0.72rem; color:rgba(255,255,255,0.4); line-height:1.5; margin-bottom:10px; }
+    .fcard-link  { display:block; font-size:0.72rem; font-weight:700; color:rgba(255,255,255,0.22); transition:color .2s; }
+    .fcard:hover .fcard-link { color:#fff; }
+
+    @media(max-width:850px){
+      .fcard,.fcard-top,.fcard-top img { width:220px; }
+      .fcard { flex-basis:220px; }
+      .fcard-top,.fcard-top img { height:220px; }
+    }
+    @media(max-width:540px){
+      .featured-section { padding:56px 0 36px; }
+      .fcard,.fcard-top,.fcard-top img { width:72vw; }
+      .fcard { flex-basis:72vw; }
+      .fcard-top,.fcard-top img { height:200px; }
+    }
+
+    /* PROVA SOCIAL (REVIEWS) */
+    .reviews-section { padding: 60px var(--page-px) 80px; background: #f7f8fc; position: relative; }
+    .reviews-section::before { content: ''; position: absolute; top: 0; left: var(--page-px); right: var(--page-px); height: 1px; background: #dde0eb; }
+    .reviews-header { margin-bottom: 56px; }
+    .reviews-header h2 { font-size: clamp(2rem,4vw,3.2rem); font-weight: 900; letter-spacing: -0.035em; color: #0d0f1a; }
+    .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .review-card { background: #fff; padding: 32px; border-radius: 20px; border: 1px solid #e8eaf2; box-shadow: 0 10px 30px rgba(0,0,50,0.02); display: flex; flex-direction: column; gap: 16px; transition: transform .3s var(--ease); }
+    .review-card:hover { transform: translateY(-5px); border-color: #d0d4e8; box-shadow: 0 20px 50px rgba(0,0,50,0.06); }
+    .review-stars { color: #FACC15; font-size: 1.1rem; letter-spacing: 2px; }
+    .review-text { font-size: 0.9rem; color: #555; line-height: 1.7; font-style: italic; flex: 1; }
+    .review-author { display: flex; align-items: center; gap: 12px; margin-top: 8px; border-top: 1px solid #f0f2f8; padding-top: 16px; }
+    .review-avatar { width: 40px; height: 40px; border-radius: 50%; background: #eef0f8; display: flex; align-items: center; justify-content: center; font-weight: 800; color: var(--blue); font-size: 0.85rem; }
+    .review-name { font-size: 0.85rem; font-weight: 800; color: #0d0f1a; display: block; }
+    .review-badge { font-size: 0.6rem; background: rgba(74,222,128,0.15); color: #2E7D4F; padding: 3px 6px; border-radius: 4px; text-transform: uppercase; font-weight: 700; letter-spacing: 0.05em; margin-top: 2px; display: inline-block; }
+
+    /* VALUES */
+    .values-section{background:#eef0f8;padding:100px var(--page-px);border-top:1px solid #e0e4ef;border-bottom:1px solid #e0e4ef}
+    .values-inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+    .values-text .section-label{margin-bottom:16px;color:#9ca3b4}
+    .values-text h2{font-size:clamp(2rem,4vw,3.2rem);font-weight:900;letter-spacing:-0.035em;line-height:1.1;color:#0d0f1a;margin-bottom:20px}
+    .values-desc{font-size:0.95rem;line-height:1.85;color:#555;margin-bottom:36px;max-width:380px}
+    .values-grid-right{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .value-item{padding:24px;background:#fff;border:1px solid #e0e4ef;border-radius:16px;transition:border-color .2s}
+    .value-item:hover{border-color:#c0c8de}
+    .value-icon{font-size:1.3rem;margin-bottom:14px;color:var(--blue)}
+    .value-item h4{font-size:0.85rem;font-weight:700;color:#0d0f1a;margin-bottom:8px}
+    .value-item p{font-size:0.76rem;color:#777;line-height:1.6}
+
+    /* STATS */
+    .stats-section{display:flex;align-items:center;padding:72px var(--page-px);border-bottom:1px solid #e0e4ef;background:#f7f8fc}
+    .stat{flex:1;display:flex;flex-direction:column;align-items:center;gap:8px}
+    .stat-num{font-size:clamp(2rem,3vw,2.6rem);font-weight:900;letter-spacing:-0.04em;color:#0d0f1a}
+    .stat-label{font-size:0.68rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#9ca3b4}
+    .stat-divider{width:1px;height:50px;background:#dde0ef}
+
+    /* PRODUCT MOCK */
+    .product-mock{display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-end;padding:24px;border-radius:16px;height:100%;min-height:200px;position:relative}
+    .pc-visual{position:relative;overflow:hidden}
+    .pc-img{width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;z-index:2}
+    .pd-visual{position:relative;overflow:hidden}
+    .pd-img{width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;z-index:2}
+    .pm-brand{font-size:0.58rem;font-weight:600;letter-spacing:0.08em;opacity:0.5;margin-bottom:6px}
+    .pm-name{font-size:1.3rem;font-weight:900;letter-spacing:-0.02em;line-height:1.1}
+    .pm-size{font-size:0.6rem;font-weight:500;opacity:0.5;margin-top:8px}
+    .pm--dark{background:linear-gradient(145deg,#0f1628,#1e2a4a);color:white}
+    .pm--blue{background:linear-gradient(135deg,#0a2a5e,#1060c8);color:white}
+    .pm--teal{background:linear-gradient(135deg,#003d28,#00804a);color:white}
+    .pm--green{background:linear-gradient(135deg,#0a2e14,#1a5c2a);color:white}
+    .pm--cyan{background:linear-gradient(135deg,#003050,#006090);color:white}
+    .pm--lilac{background:linear-gradient(135deg,#1e1040,#3d2080);color:white}
+    .pm--purple-dark{background:linear-gradient(135deg,#160d38,#2d1a70);color:white}
+    .pm--sm{min-height:140px}
+    .pm--sm .pm-name{font-size:0.95rem}
+
+    /* PRODUCTS PAGE */
+    .products-hero{padding:140px var(--page-px) 48px;background:#f7f8fc;border-bottom:1px solid rgba(0,0,0,0.05)}
+    .products-hero-title{font-size:clamp(2.5rem,5vw,4rem);font-weight:900;letter-spacing:-0.04em;line-height:1.0;color:#0d0f1a}
+    .line-filter{display:flex;gap:12px;padding:24px var(--page-px) 40px;flex-wrap:wrap;background:#f7f8fc;border-bottom:1px solid rgba(0,0,0,0.05)}
+    .filter-btn{font-family:var(--font);font-size:0.76rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;padding:10px 24px;border-radius:100px;border:1px solid rgba(0,0,0,0.08);color:#6b7280;background:rgba(255,255,255,0.6);cursor:pointer;transition:all .3s var(--ease);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+    .filter-btn:hover{border-color:#0d0f1a;color:#0d0f1a;background:rgba(255,255,255,0.9)}
+    .filter-btn.active{background:#0d0f1a;color:#fff;border-color:#0d0f1a;box-shadow:0 8px 20px rgba(0,0,0,0.15)}
+    .products-grid-section{padding:48px var(--page-px) 120px;background:#f7f8fc}
+    .products-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+    .product-card{border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,0.8);cursor:pointer;transition:all .35s var(--ease);background:rgba(255,255,255,0.4);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);display:flex;flex-direction:column;box-shadow:0 10px 30px rgba(0,0,50,0.03)}
+    .product-card:hover{transform:translateY(-8px);border-color:#fff;background:rgba(255,255,255,0.7);box-shadow:0 20px 50px rgba(0,0,50,0.08)}
+    .product-card.hidden{display:none}
+    .pc-visual{height:280px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+    .product-mock{transition: transform 0.4s var(--ease)}
+    .product-card:hover .product-mock{transform: scale(1.04)}
+    .pc--dark{background:linear-gradient(145deg,#0f1628,#1a2040)}
+    .pc--blue{background:linear-gradient(145deg,#071028,#0d2050)}
+    .pc--teal{background:linear-gradient(145deg,#041a10,#083020)}
+    .pc--green{background:linear-gradient(145deg,#071a0e,#0d2c18)}
+    .pc--cyan{background:linear-gradient(145deg,#061420,#0c2538)}
+    .pc--lilac{background:linear-gradient(145deg,#100c28,#201548)}
+    .pc--purple{background:linear-gradient(145deg,#0e0820,#1c1040)}
+    .pc-info{padding:20px 22px 22px;background:transparent;flex:1;display:flex;flex-direction:column}
+    .pc-line{font-size:0.65rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:#bbc0d4;margin-bottom:8px}
+    .pc-name{font-size:1.1rem;font-weight:800;letter-spacing:-0.01em;color:#0d0f1a;margin:0 0 8px}
+    .pc-desc{font-size:0.75rem;color:#6b7280;line-height:1.6;margin:0 0 10px}
+    .pc-price{font-size:0.88rem;font-weight:800;color:#0d0f1a;letter-spacing:-0.01em;margin-top:auto}
+
+    /* PRODUCT DETAIL */
+    .product-page-inner{padding:110px var(--page-px) 80px;max-width:1200px;margin:0 auto}
+    #page-produto{background:#f7f8fc}
+    .back-btn{font-family:var(--font);font-size:0.82rem;font-weight:600;color:#9ca3b4;cursor:pointer;padding:0;margin-bottom:56px;transition:color .2s;display:block;background:none;border:none}
+    .back-btn:hover{color:#0d0f1a}
+    .product-detail{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+    .pd-visual{border-radius:24px;overflow:hidden;height:500px;display:flex;align-items:center;justify-content:center}
+    .pd-visual .product-mock{border-radius:0;width:100%;height:100%;min-height:unset}
+    .pd-visual .pm-name{font-size:2.2rem}
+    .pd-line{font-size:0.68rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#9ca3b4;margin-bottom:14px}
+    .pd-name{font-size:clamp(2rem,4vw,3.2rem);font-weight:900;letter-spacing:-0.04em;color:#0d0f1a;line-height:1.0;margin-bottom:18px}
+    .pd-tagline{font-size:0.95rem;color:#555;line-height:1.75;margin-bottom:36px;max-width:380px}
+    .pd-benefits{display:flex;flex-direction:column;gap:10px;margin-bottom:44px}
+    .pd-benefit{display:flex;align-items:center;gap:14px;padding:14px 18px;background:rgba(255,255,255,0.6);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.8);border-radius:12px;transition:border-color .2s;box-shadow:0 4px 12px rgba(0,0,0,0.02)}
+    .pd-benefit:hover{border-color:#fff;background:rgba(255,255,255,0.9)}
+    .pd-benefit-icon{width:32px;height:32px;border-radius:50%;background:#eef0f8;color:#6b7280;display:flex;align-items:center;justify-content:center;font-size:0.72rem;flex-shrink:0}
+    .pd-benefit-text{font-size:0.84rem;font-weight:500;color:#0d0f1a}
+    .pd-meta{display:flex;gap:28px;margin-bottom:40px}
+    .pd-meta-item{display:flex;flex-direction:column;gap:4px}
+    .pd-meta-val{font-size:1.25rem;font-weight:900;color:#0d0f1a}
+    .pd-meta-key{font-size:0.62rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#9ca3b4}
+    .pd-content{display:flex;flex-direction:column;}
+    .pd-cta{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+    .pd-price{font-size:2rem;font-weight:900;color:#0d0f1a;letter-spacing:-0.03em}
+    .pd-price-label{font-size:0.62rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#9ca3b4;display:block;margin-bottom:4px}
+    .pd-price-block{display:flex;flex-direction:column;margin-right:8px}
+    #page-produto .btn-primary{font-family:var(--font);font-size:0.82rem;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;background:#0d0f1a;color:#fff;padding:14px 32px;border-radius:100px;transition:all .25s var(--ease);border:none;cursor:pointer}
+    #page-produto .btn-primary:hover{background:var(--blue);color:#fff;transform:translateY(-2px);box-shadow:0 12px 32px rgba(30,144,255,0.35)}
+    #page-produto .btn-ghost{font-family:var(--font);font-size:0.82rem;font-weight:600;color:#9ca3b4;padding:14px 0;background:none;border:none;cursor:pointer;transition:color .2s}
+    #page-produto .btn-ghost:hover{color:#0d0f1a}
+
+    /* SOBRE */
+    .about-hero{padding:180px var(--page-px) 100px;background:var(--bg);border-bottom:1px solid var(--border);position:relative;overflow:hidden;}
+    .about-hero::after{content:'';position:absolute;top:-50%;right:-10%;width:800px;height:800px;background:radial-gradient(circle, rgba(30,144,255,0.08) 0%, transparent 60%);pointer-events:none;}
+    .about-title{font-size:clamp(3.5rem,7vw,5.5rem);font-weight:900;letter-spacing:-0.04em;line-height:1.0;color:var(--text);position:relative;z-index:1;}
+    .about-title span{background:linear-gradient(100deg,var(--text) 20%,var(--blue) 60%,var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .about-content{padding:100px var(--page-px);display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;background:var(--bg-2);border-bottom:1px solid var(--border)}
+    .about-text-block h2{font-size:1.6rem;font-weight:800;letter-spacing:-0.02em;color:var(--text);margin-bottom:24px;display:flex;align-items:center;gap:12px;}
+    .about-text-block h2::before{content:'';display:block;width:8px;height:8px;background:var(--blue);border-radius:50%;box-shadow:0 0 10px var(--blue)}
+    .about-text-block p{font-size:1rem;color:var(--text-2);line-height:1.85}
+    .about-pillars{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    .pillar{padding:32px 24px;border:1px solid var(--border);border-radius:20px;background:var(--surface);transition:all .35s var(--ease);backdrop-filter:blur(10px);}
+    .pillar:hover{border-color:rgba(255,255,255,0.2);transform:translateY(-5px);background:rgba(255,255,255,0.06);box-shadow:0 20px 40px rgba(0,0,0,0.4), inset 0 0 20px rgba(255,255,255,0.02)}
+    .pillar-num{font-size:0.65rem;font-weight:700;letter-spacing:0.16em;color:var(--blue);display:block;margin-bottom:16px}
+    .pillar h3{font-size:1.05rem;font-weight:800;color:var(--text);margin-bottom:10px}
+    .pillar p{font-size:0.8rem;color:var(--text-2);line-height:1.6}
+    .about-cta{padding:120px var(--page-px);text-align:center;background:var(--bg);position:relative;overflow:hidden;}
+    .about-cta::before{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:600px;height:400px;background:radial-gradient(circle, rgba(123,97,255,0.08) 0%, transparent 70%);pointer-events:none;}
+    .about-cta h2{font-size:clamp(2.5rem,5vw,3.5rem);font-weight:900;letter-spacing:-0.03em;color:var(--text);margin-bottom:40px;position:relative;z-index:1;}
+
+    /* CART UI */
+    .cart-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 2000; opacity: 0; pointer-events: none; transition: opacity .4s var(--ease); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); }
+    .cart-overlay.open { opacity: 1; pointer-events: all; }
+    .cart-sidebar { position: fixed; top: 0; right: 0; width: 100%; max-width: 400px; height: 100vh; background: rgba(10, 13, 24, 0.85); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); border-left: 1px solid var(--border); z-index: 2001; transform: translateX(100%); transition: transform .4s var(--ease); display: flex; flex-direction: column; }
+    .cart-sidebar.open { transform: translateX(0); }
+    .cart-header { padding: 24px var(--page-px); border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+    .cart-header h3 { font-size: 1.2rem; font-weight: 800; color: var(--text); }
+    .cart-close { background: none; border: none; color: var(--text-2); font-size: 1.8rem; cursor: pointer; transition: color .2s; line-height: 1; }
+    .cart-close:hover { color: var(--text); }
+    .cart-items { flex: 1; overflow-y: auto; padding: 24px var(--page-px); display: flex; flex-direction: column; gap: 20px; }
+    .cart-item { display: flex; gap: 16px; align-items: center; padding-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .cart-item-img { width: 64px; height: 64px; border-radius: 12px; object-fit: contain; background: var(--surface); padding: 5px; }
+    .cart-item-info { flex: 1; display: flex; flex-direction: column; gap: 4px; }
+    .cart-item-title { font-size: 0.85rem; font-weight: 700; color: var(--text); }
+    .cart-item-price { font-size: 0.8rem; color: var(--blue); font-weight: 600; }
+    .cart-item-qty { display: flex; align-items: center; gap: 12px; margin-top: 6px; }
+    .cart-qty-btn { width: 24px; height: 24px; border-radius: 50%; background: var(--surface); color: var(--text); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 0.8rem; }
+    .cart-qty-btn:hover { background: var(--text); color: var(--bg); }
+    .cart-qty-val { font-size: 0.8rem; font-weight: 600; }
+    .cart-footer { padding: 24px var(--page-px); border-top: 1px solid var(--border); background: rgba(0,0,0,0.2); }
+    .cart-total-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+    .cart-total-label { font-size: 0.9rem; color: var(--text-2); font-weight: 600; }
+    .cart-total-val { font-size: 1.4rem; font-weight: 900; color: var(--text); }
+    .w-full { width: 100%; justify-content: center; }
+
+    /* CHECKOUT UI */
+    .checkout-container { max-width: 1100px; margin: 0 auto; padding: 120px var(--page-px) 80px; }
+    .checkout-title { font-size: clamp(2rem,4vw,3.2rem); font-weight: 900; letter-spacing: -0.04em; margin-bottom: 40px; color: var(--text); }
+    .checkout-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px; align-items: start; }
+    .checkout-summary, .checkout-form { background: var(--bg-2); padding: 40px; border-radius: 24px; border: 1px solid var(--border); }
+    .checkout-summary h2, .checkout-form h2 { font-size: 1.4rem; font-weight: 800; margin-bottom: 24px; color: var(--text); padding-bottom: 16px; border-bottom: 1px solid var(--border); }
+    .checkout-items-list { display: flex; flex-direction: column; gap: 16px; margin-bottom: 32px; max-height: 400px; overflow-y: auto; padding-right: 10px; }
+    .checkout-item { display: flex; justify-content: space-between; align-items: center; }
+    .checkout-item-name { font-size: 0.9rem; font-weight: 600; color: var(--text); }
+    .checkout-item-qty { color: var(--text-3); font-size: 0.8rem; }
+    .checkout-item-price { font-size: 0.9rem; font-weight: 700; color: var(--blue); }
+    .checkout-coupon { display: flex; gap: 12px; margin-bottom: 32px; }
+    .checkout-input { flex: 1; padding: 14px 20px; border-radius: 12px; border: 1px solid var(--border); background: var(--bg); color: var(--text); font-family: var(--font); font-size: 0.9rem; transition: border-color .2s; }
+    .checkout-input:focus { outline: none; border-color: var(--blue); }
+    .checkout-coupon button { background: var(--surface); color: var(--text); border: 1px solid var(--border); padding: 0 24px; border-radius: 12px; font-weight: 700; cursor: pointer; transition: all .2s; }
+    .checkout-coupon button:hover { background: var(--text); color: var(--bg); }
+    .checkout-totals { display: flex; flex-direction: column; gap: 12px; }
+    .tot-row { display: flex; justify-content: space-between; font-size: 0.95rem; color: var(--text-2); font-weight: 500; }
+    .tot-row.grand-total { font-size: 1.4rem; font-weight: 900; color: var(--text); border-top: 1px solid var(--border); padding-top: 16px; margin-top: 8px; }
+    
+    .form-group { margin-bottom: 20px; }
+    .form-group label { display: block; font-size: 0.8rem; font-weight: 600; color: var(--text-2); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.05em; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .pay-methods { display: flex; gap: 16px; margin-bottom: 24px; }
+    .pay-method-label { flex: 1; border: 1px solid var(--border); border-radius: 12px; padding: 16px; text-align: center; cursor: pointer; font-weight: 600; color: var(--text-2); transition: all .2s; display: flex; align-items: center; justify-content: center; gap: 8px; background: var(--bg); }
+    .pay-method-label:hover { border-color: rgba(255,255,255,0.3); }
+    .pay-method-label input { display: none; }
+    .pay-method-label:has(input:checked) { border-color: var(--blue); color: var(--blue); background: rgba(30,144,255,0.05); }
+    .pix-box { padding: 40px 20px; text-align: center; background: var(--bg); border: 1px dashed var(--border); border-radius: 12px; }
+    .pix-box p { color: var(--text-2); font-size: 0.9rem; margin-top: 16px; }
+
+    /* NAV BUTTONS WRAPPER */
+    .nav-actions { display: flex; align-items: center; gap: 16px; }
+    .cart-btn { background: none; border: none; color: var(--text); cursor: pointer; position: relative; display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; transition: background .2s; }
+    .cart-btn:hover { background: var(--surface); }
+    .cart-btn svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .cart-count { position: absolute; top: 0px; right: 0px; background: var(--blue); color: #fff; font-size: 0.6rem; font-weight: 800; width: 18px; height: 18px; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 2px solid var(--bg); }
+
+    /* FOOTER */
+    .footer{background:var(--bg-2);border-top:1px solid var(--border);padding:72px var(--page-px) 36px}
+    .footer-top{display:flex;justify-content:space-between;gap:60px;margin-bottom:56px;padding-bottom:56px;border-bottom:1px solid var(--border)}
+    .footer-logo{font-size:1.4rem;font-weight:900;letter-spacing:-0.03em;display:block;margin-bottom:14px;color:var(--text)}
+    .footer-brand p{font-size:0.82rem;color:var(--text-3);line-height:1.7}
+    .footer-links{display:flex;gap:72px}
+    .footer-col{display:flex;flex-direction:column;gap:12px}
+    .footer-col h4{font-size:0.62rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-3);margin-bottom:4px}
+    .footer-col a{font-size:0.82rem;color:var(--text-2);transition:color .2s}
+    .footer-col a:hover{color:var(--text)}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;font-size:0.75rem;color:var(--text-3)}
+
+    /* ===================================
+       RESPONSIVIDADE (MOBILE OPTIMIZATION)
+       =================================== */
+
+    /* ===== TABLET GRANDE (≤1200px) ===== */
+    @media (max-width:1200px){
+        .products-grid{grid-template-columns:repeat(3,1fr)}
+      .featured-card{min-width:calc(33.333% - 14px)}
+    }
+
+    /* ===== TABLET (≤900px) ===== */
+    @media (max-width:900px){
+      :root{--page-px:24px}
+      .nav-links,.nav-cta{display:none}
+      .hamburger{display:flex}
+
+      /* Hero */
+      .hero-inner{padding:60px var(--page-px) 48px}
+      .hero-title{font-size:clamp(2.8rem,9vw,5rem)}
+      .hero-sub{font-size:0.95rem}
+      .hero-cta{gap:12px}
+      .hero-stats{gap:28px}
+      .hstat-num{font-size:1.5rem}
+
+      /* Lines */
+            
+      /* Featured */
+      .featured-section{padding:60px 0 40px}
+      .featured-card{flex:0 0 calc(50% - 10px)}
+
+      /* Reviews */
+      .reviews-section{padding:60px var(--page-px)}
+      .reviews-grid{grid-template-columns:repeat(2,1fr);gap:16px}
+
+      /* Values */
+      .values-section{padding:72px var(--page-px)}
+      .values-inner{grid-template-columns:1fr;gap:40px}
+      .values-desc{max-width:100%}
+      .values-grid-right{grid-template-columns:repeat(2,1fr)}
+
+      /* Stats */
+      .stats-section{flex-wrap:wrap;gap:32px 0;padding:56px var(--page-px)}
+      .stat{flex:0 0 50%}
+      .stat-divider{display:none}
+
+      /* Product detail */
+      .product-detail{grid-template-columns:1fr;gap:32px}
+      .pd-visual{height:340px}
+
+      /* About */
+      .about-hero{padding:130px var(--page-px) 72px}
+      .about-content{grid-template-columns:1fr;gap:48px;padding:72px var(--page-px)}
+      .about-pillars{grid-template-columns:repeat(2,1fr)}
+      .about-cta{padding:80px var(--page-px)}
+
+      /* Products page */
+      .products-hero{padding:110px var(--page-px) 36px}
+      .products-grid{grid-template-columns:repeat(2,1fr);gap:16px}
+      .products-grid-section{padding:32px var(--page-px) 80px}
+
+      /* Checkout */
+      .checkout-grid{grid-template-columns:1fr;gap:28px}
+      .checkout-container{padding:100px var(--page-px) 60px}
+      .checkout-summary,.checkout-form{padding:28px}
+
+      /* Footer */
+      .footer-top{flex-direction:column;gap:40px}
+      .footer-links{display:grid;grid-template-columns:repeat(2,1fr);gap:32px}
+      .footer-bottom{flex-direction:column;gap:10px;text-align:center}
+    }
+
+    /* ===== MOBILE (≤540px) ===== */
+    @media (max-width:540px){
+      :root{--page-px:18px}
+
+      /* Nav */
+      .nav{height:60px}
+      .mobile-menu{top:60px}
+
+      /* Hero */
+      .hero{padding-top:60px}
+      .hero-inner{padding:48px var(--page-px) 40px}
+      .hero-title{font-size:clamp(2.4rem,11vw,3.8rem)}
+      .hero-sub{font-size:0.88rem;margin-bottom:32px}
+      .hero-cta{flex-direction:column;width:100%;gap:8px;margin-bottom:44px}
+      .btn-hero-primary{width:100%;justify-content:center;padding:14px 24px}
+      .btn-hero-ghost{padding:10px 8px}
+      .hero-stats{flex-wrap:wrap;justify-content:center;gap:20px 28px}
+      .hstat-div{display:none}
+      .hstat-num{font-size:1.35rem}
+      .hstat-label{font-size:0.58rem}
+      .hero-glow--1{width:260px;height:260px}
+      .hero-glow--2{width:200px;height:200px}
+
+      /* Lines */
+                        .lc-product:hover{transform:none}
+  
+      /* Featured */
+      .featured-section{padding:48px 0 32px}
+      .featured-header{flex-direction:column;align-items:flex-start;gap:8px;margin-bottom:28px;padding:0 var(--page-px)}
+      .featured-card{flex:0 0 72vw}
+      .carousel-btn{display:none}
+
+      /* Reviews */
+      .reviews-section{padding:48px var(--page-px)}
+      .reviews-grid{grid-template-columns:1fr}
+      .review-card{padding:24px}
+
+      /* Values */
+      .values-section{padding:56px var(--page-px)}
+      .values-grid-right{grid-template-columns:1fr;gap:12px}
+      .value-item{padding:20px}
+
+      /* Stats */
+      .stats-section{padding:48px var(--page-px);gap:24px}
+      .stat{flex:0 0 100%}
+
+      /* Products */
+      .products-hero{padding:92px var(--page-px) 28px}
+      .products-hero-title{font-size:clamp(1.8rem,7vw,2.5rem)}
+      .line-filter{gap:8px;padding:16px var(--page-px) 24px}
+      .filter-btn{font-size:0.68rem;padding:8px 14px}
+      .products-grid{grid-template-columns:repeat(2,1fr);gap:10px}
+      .products-grid-section{padding:24px var(--page-px) 60px}
+      .pc-visual{height:180px}
+      .pc-info{padding:14px 14px 16px}
+      .pc-name{font-size:0.88rem}
+      .pc-desc{font-size:0.66rem}
+
+      /* Product detail */
+      .product-page-inner{padding:88px var(--page-px) 48px}
+      .pd-visual{height:260px;border-radius:16px}
+      .pd-name{font-size:1.8rem}
+      .pd-meta{gap:16px;flex-wrap:wrap}
+      .pd-cta{flex-direction:column;align-items:flex-start;gap:12px}
+      .pd-cta .btn-primary{width:100%;text-align:center;justify-content:center}
+
+      /* About */
+      .about-hero{padding:110px var(--page-px) 56px}
+      .about-title{font-size:clamp(2.5rem,10vw,3.5rem)}
+      .about-content{padding:56px var(--page-px);gap:36px}
+      .about-pillars{grid-template-columns:1fr;gap:12px}
+      .pillar{padding:24px 20px}
+      .about-cta{padding:60px var(--page-px)}
+      .about-cta h2{font-size:clamp(1.8rem,7vw,2.5rem)}
+
+      /* Checkout */
+      .checkout-container{padding:88px var(--page-px) 48px}
+      .checkout-summary,.checkout-form{padding:20px 16px}
+      .form-row{grid-template-columns:1fr}
+      .pay-methods{flex-direction:column;gap:10px}
+
+      /* Cart */
+      .cart-sidebar{max-width:100%;width:100%}
+
+      /* Footer */
+      .footer{padding:56px var(--page-px) 28px}
+      .footer-links{grid-template-columns:1fr;gap:28px}
+      .footer-bottom{flex-direction:column;gap:10px;text-align:center}
+    }
+
+    /* ===================================
+       LINES SHOWCASE — SCROLL NORMAL
+       =================================== */
+
+    .lines-showcase {
+      /* Fade in from hero top, fade out to featured bottom */
+      /* Single continuous gradient blending all line colors */
+      background:
+        radial-gradient(ellipse 70% 30% at 15% 10%,  rgba(96,165,250,0.18) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 25% at 85% 28%,  rgba(30,144,255,0.16) 0%, transparent 60%),
+        radial-gradient(ellipse 65% 25% at 20% 50%,  rgba(74,222,128,0.14) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 25% at 80% 72%,  rgba(56,189,248,0.16) 0%, transparent 60%),
+        radial-gradient(ellipse 65% 30% at 40% 92%,  rgba(167,139,250,0.18) 0%, transparent 60%),
+        #060810;
+      position: relative;
+    }
+
+    /* Fade from hero dark into showcase */
+    .lines-showcase::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 180px;
+      background: linear-gradient(to bottom, #060810, transparent);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* Smooth color fade from MIND+ purple to featured dark at bottom */
+    .lines-showcase::after {
+      content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 220px;
+      background: linear-gradient(to bottom, transparent, rgba(167,139,250,0.10) 40%, #100d20); pointer-events: none; z-index: 1;
+    }
+
+    .ls-block {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 80px var(--page-px);
+      gap: 6vw; /* Distância fixa e consistente entre texto e imagem! */
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .ls-block.reverse {
+      flex-direction: row-reverse;
+    }
+
+    /* Text side */
+    .ls-text {
+      flex: 1;
+      max-width: 440px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* TEXTO À ESQUERDA -> Alinha os elementos à direita (abraçando a imagem) */
+    .ls-block:not(.reverse) .ls-text {
+      align-items: flex-end;
+      text-align: right;
+    }
+
+    /* TEXTO À DIREITA -> Alinha os elementos à esquerda (abraçando a imagem) */
+    .ls-block.reverse .ls-text {
+      align-items: flex-start;
+      text-align: left;
+    }
+
+    .ls-num {
+      font-size: 0.62rem; font-weight: 700;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--ls-accent, rgba(255,255,255,0.3));
+      display: block; margin-bottom: 20px;
+      opacity: 0; transform: translateY(16px);
+      transition: opacity .6s ease, transform .6s ease;
+    }
+    .ls-name {
+      font-size: clamp(3.5rem, 6vw, 7rem);
+      font-weight: 900; letter-spacing: -0.05em;
+      line-height: 0.88; color: var(--ls-accent, #fff);
+      display: block; margin-bottom: 18px;
+      opacity: 0; transform: translateY(24px);
+      transition: opacity .7s ease .1s, transform .7s ease .1s;
+    }
+    .ls-tagline {
+      font-size: 0.72rem; font-weight: 700;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: rgba(255,255,255,0.25);
+      display: block; margin-bottom: 16px;
+      opacity: 0; transform: translateY(16px);
+      transition: opacity .6s ease .15s, transform .6s ease .15s;
+    }
+    .ls-desc {
+      font-size: 0.95rem; color: rgba(255,255,255,0.5);
+      line-height: 1.8; max-width: 380px; margin-bottom: 36px;
+      opacity: 0; transform: translateY(16px);
+      transition: opacity .6s ease .2s, transform .6s ease .2s;
+    }
+    .ls-btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-family: var(--font); font-size: 0.76rem;
+      font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+      color: #fff; border: 1px solid var(--ls-accent, rgba(255,255,255,0.2));
+      padding: 12px 24px; border-radius: 100px;
+      background: rgba(255,255,255,0.05); cursor: pointer;
+      transition: all .25s ease;
+      opacity: 0; transform: translateY(12px);
+      transition: opacity .6s ease .28s, transform .6s ease .28s, background .25s, border-color .25s;
+    }
+    .ls-btn:hover { background: rgba(255,255,255,0.12); transform: translateX(4px) !important; }
+
+    /* Image side */
+    .ls-img-wrap {
+      position: relative; z-index: 2;
+      display: flex; align-items: center; justify-content: center;
+      perspective: 1200px;
+      height: 480px; /* Aumentado de 380px para dar espaço à imagem maior */
+    }
+    .ls-img {
+      width: min(480px, 45vw); height: auto; max-height: 480px; /* Imagens significativamente maiores (era 340px) */
+      object-fit: contain;
+      transform: rotateY(-10deg) rotateX(4deg) translateY(20px) scale(0.88);
+      filter: drop-shadow(0 60px 100px rgba(0,0,0,0.7))
+              drop-shadow(0 0 60px var(--ls-shadow, rgba(30,144,255,0.2)));
+      opacity: 0;
+      transition: transform 1s cubic-bezier(0.22,1,0.36,1) .15s,
+                  opacity .8s ease .1s,
+                  filter 1s ease .1s;
+    }
+    /* Reverse blocks: flip the tilt */
+    .ls-block.reverse .ls-img {
+      transform: rotateY(10deg) rotateX(4deg) translateY(20px) scale(0.88);
+    }
+
+    /* Ground glow */
+    .ls-glow {
+      position: absolute; bottom: 6%; left: 50%;
+      transform: translateX(-50%);
+      width: 220px; height: 40px;
+      border-radius: 50%; filter: blur(20px);
+      background: var(--ls-shadow, rgba(30,144,255,0.3));
+      opacity: 0; transition: opacity .8s ease .3s;
+    }
+
+    /* Visible state — triggered by IntersectionObserver */
+    .ls-block.in-view .ls-num,
+    .ls-block.in-view .ls-name,
+    .ls-block.in-view .ls-tagline,
+    .ls-block.in-view .ls-desc,
+    .ls-block.in-view .ls-btn {
+      opacity: 1; transform: translateY(0);
+    }
+    .ls-block.in-view .ls-img {
+      opacity: 1;
+      transform: rotateY(-8deg) rotateX(3deg) translateY(-8px) scale(1);
+    }
+    .ls-block.in-view.reverse .ls-img {
+      transform: rotateY(8deg) rotateX(3deg) translateY(-8px) scale(1);
+    }
+    .ls-block.in-view .ls-glow { opacity: 0.55; }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+      .ls-block {
+        grid-template-columns: 1fr;
+        padding: 56px var(--page-px) 52px;
+        gap: 24px;
       }
-    </script>
-<style>
-      .material-symbols-outlined {
-        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-      }
-      .tonal-shift-bg {
-        background: linear-gradient(to bottom, rgba(255, 248, 240, 0.9), rgba(255, 248, 240, 0.7));
-      }
-    </style>
+      .ls-block.reverse { direction: ltr; }
+      .ls-img-wrap { height: 320px; order: -1; } /* Aumentado para mobile */
+      .ls-img { width: min(360px, 80vw); max-height: 320px; } /* Aumentado para mobile */
+      .ls-name { font-size: clamp(3rem, 12vw, 4.5rem); }
+      .ls-desc { max-width: 100%; }
+    }
+    @media (max-width: 480px) {
+      .ls-img-wrap { height: 260px; } /* Aumentado para telas muito pequenas */
+      .ls-img { width: min(300px, 75vw); max-height: 260px; } /* Aumentado para telas muito pequenas */
+    }
+
+  </style>
 </head>
-<body class="bg-surface text-on-surface font-body">
-<!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-[#fff8f0]/80 backdrop-blur-xl shadow-[0px_20px_40px_rgba(30,27,21,0.06)]">
-<div class="flex justify-between items-center px-8 py-4 max-w-screen-2xl mx-auto">
-<div class="text-2xl font-bold tracking-tighter text-[#145F48] font-headline">
-                Lazer Terra Verde
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <a href="#home" class="nav-logo" onclick="showPage('home')">murilabs<span class="dot">.</span></a>
+    <ul class="nav-links">
+      <li><a href="#" onclick="showPage('home')">Início</a></li>
+      <li><a href="#" onclick="showPage('produtos')">Produtos</a></li>
+      <li><a href="#" onclick="showPage('sobre')">Sobre</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="cart-btn" onclick="toggleCart()" aria-label="Carrinho">
+        <svg viewBox="0 0 24 24"><path d="M9 20a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-9.8-2h11.6L21 8H7M4 4h2l1.6 8.5"></path></svg>
+        <span class="cart-count" id="navCartCount">0</span>
+      </button>
+      <button class="nav-cta" onclick="showPage('produtos')">Explorar</button>
+      <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#" onclick="showPage('home'); toggleMenu()">Início</a>
+    <a href="#" onclick="showPage('produtos'); toggleMenu()">Produtos</a>
+    <a href="#" onclick="showPage('sobre'); toggleMenu()">Sobre</a>
+  </div>
+
+  <!-- ======================== HOME ======================== -->
+  <div id="page-home" class="page active">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-bg">
+        <div class="hero-glow hero-glow--1"></div>
+        <div class="hero-glow hero-glow--2"></div>
+        <div class="hero-glow hero-glow--3"></div>
+        <div class="hero-grid-lines"></div>
+      </div>
+
+      <div class="hero-inner">
+        <div class="hero-top">
+          <span class="hero-tag">Suplementação inteligente</span>
+        </div>
+
+        <h1 class="hero-title">
+          <span class="ht-line ht-line--1">Seu corpo</span>
+          <span class="ht-line ht-line--2">merece mais<span class="ht-dot">.</span></span>
+        </h1>
+
+        <p class="hero-sub">Fórmulas limpas, ingredientes reais e ciência aplicada — do atleta de elite a quem quer viver melhor.</p>
+
+        <div class="hero-cta">
+          <button class="btn-hero-primary" onclick="showPage('produtos')">
+            Explorar produtos
+            <span class="btn-arrow">→</span>
+          </button>
+          <button class="btn-hero-ghost" onclick="showPage('sobre')">Nossa história</button>
+        </div>
+
+        <div class="hero-stats">
+          <div class="hstat">
+            <span class="hstat-num">25<span class="hstat-plus">+</span></span>
+            <span class="hstat-label">Produtos</span>
+          </div>
+          <div class="hstat-div"></div>
+          <div class="hstat">
+            <span class="hstat-num">5</span>
+            <span class="hstat-label">Linhas</span>
+          </div>
+          <div class="hstat-div"></div>
+          <div class="hstat">
+            <span class="hstat-num">0</span>
+            <span class="hstat-label">Corantes artificiais</span>
+          </div>
+          <div class="hstat-div"></div>
+          <div class="hstat">
+            <span class="hstat-num">100<span class="hstat-plus">%</span></span>
+            <span class="hstat-label">Transparência</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LINHAS SHOWCASE -->
+    <section class="lines-showcase" id="linesShowcase">
+
+      <!-- CORE -->
+      <div class="ls-block ls-block--core" style="--ls-accent:#60A5FA; --ls-shadow:rgba(96,165,250,0.35)">
+        <div class="ls-text">
+          <span class="ls-num">01 / 05</span>
+          <span class="ls-name">CORE</span>
+          <span class="ls-tagline">Os essenciais</span>
+          <p class="ls-desc">Base sólida para qualquer rotina. Fórmulas testadas e resultados consistentes para quem não abre mão da evolução.</p>
+          <button class="ls-btn" onclick="showProductsLine('core')">Ver linha →</button>
+        </div>
+        <div class="ls-img-wrap">
+          <img class="ls-img" src="images/core-line.png" alt="CORE" onerror="this.style.opacity='0'" />
+          <div class="ls-glow"></div>
+        </div>
+      </div>
+
+      <!-- NEXT -->
+      <div class="ls-block ls-block--next reverse" style="--ls-accent:#1E90FF; --ls-shadow:rgba(30,144,255,0.35)">
+        <div class="ls-text">
+          <span class="ls-num">02 / 05</span>
+          <span class="ls-name">NEXT</span>
+          <span class="ls-tagline">O próximo nível</span>
+          <p class="ls-desc">Para quem quer ir além. Energia, foco e recuperação em equilíbrio para superar seus próprios limites.</p>
+          <button class="ls-btn" onclick="showProductsLine('next')">Ver linha →</button>
+        </div>
+        <div class="ls-img-wrap">
+          <img class="ls-img" src="images/next-line.png" alt="NEXT" onerror="this.style.opacity='0'" />
+          <div class="ls-glow"></div>
+        </div>
+      </div>
+
+      <!-- PURE -->
+      <div class="ls-block ls-block--pure" style="--ls-accent:#4ADE80; --ls-shadow:rgba(74,222,128,0.35)">
+        <div class="ls-text">
+          <span class="ls-num">03 / 05</span>
+          <span class="ls-name">PURE</span>
+          <span class="ls-tagline">Ingredientes limpos</span>
+          <p class="ls-desc">100% vegano. Zero excessos, zero enganação. Só o que seu corpo realmente precisa, com total transparência.</p>
+          <button class="ls-btn" onclick="showProductsLine('pure')">Ver linha →</button>
+        </div>
+        <div class="ls-img-wrap">
+          <img class="ls-img" src="images/pure-line.png" alt="PURE" onerror="this.style.opacity='0'" />
+          <div class="ls-glow"></div>
+        </div>
+      </div>
+
+      <!-- HYDRATE -->
+      <div class="ls-block ls-block--hydrate reverse" style="--ls-accent:#38BDF8; --ls-shadow:rgba(56,189,248,0.35)">
+        <div class="ls-text">
+          <span class="ls-num">04 / 05</span>
+          <span class="ls-name">HYDRATE</span>
+          <span class="ls-tagline">Hidratação total</span>
+          <p class="ls-desc">Eletrólitos essenciais para qualquer ritmo. Do treino intenso ao dia a dia — hidratação que funciona de verdade.</p>
+          <button class="ls-btn" onclick="showProductsLine('hydrate')">Ver linha →</button>
+        </div>
+        <div class="ls-img-wrap">
+          <img class="ls-img" src="images/hydrate-line.png" alt="HYDRATE" onerror="this.style.opacity='0'" />
+          <div class="ls-glow"></div>
+        </div>
+      </div>
+
+      <!-- MIND+ -->
+      <div class="ls-block ls-block--mind" style="--ls-accent:#A78BFA; --ls-shadow:rgba(167,139,250,0.35)">
+        <div class="ls-text">
+          <span class="ls-num">05 / 05</span>
+          <span class="ls-name">MIND+</span>
+          <span class="ls-tagline">Foco e cognição</span>
+          <p class="ls-desc">Mente afiada, foco real. Cognição avançada para mente e corpo em sincronia — performance que vai além do físico.</p>
+          <button class="ls-btn" onclick="showProductsLine('mind')">Ver linha →</button>
+        </div>
+        <div class="ls-img-wrap">
+          <img class="ls-img" src="images/mind-line.png" alt="MIND+" onerror="this.style.opacity='0'" />
+          <div class="ls-glow"></div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- DESTAQUES -->
+    <section class="featured-section">
+      <div class="featured-header">
+        <h2>Os mais escolhidos.</h2>
+        <span class="featured-header-link" onclick="showPage('produtos')">Ver todos →</span>
+      </div>
+      <div class="featured-carousel-wrapper">
+        <div class="frow" id="featuredGridCarousel">
+
+          <div class="fcard" onclick="showProduct('whey-core')" data-glow="core">
+            <div class="fcard-top bg-dark">
+              <span class="fcard-badge">Mais Vendido</span>
+              <img src="images/whey-core.png" alt="Whey Core" onerror="this.style.display='none'" />
             </div>
-<div class="hidden md:flex items-center gap-8 font-headline font-medium tracking-tight text-[#145F48]/70">
-<a class="text-[#145F48] border-b-2 border-[#145F48] pb-1 hover:opacity-80 transition-all" href="#espaco">Espaço</a>
-<a class="hover:text-[#145F48] transition-all" href="#comodidades">Comodidades</a>
-<a class="hover:text-[#145F48] transition-all" href="#galeria">Galeria</a>
-<a class="hover:text-[#145F48] transition-all" href="#precos">Preços</a>
-<a class="hover:text-[#145F48] transition-all" href="#regras">Regras</a>
-</div>
-<button class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-headline font-semibold text-sm hover:opacity-90 active:scale-95 transition-all">
-                Reservar Agora
-            </button>
-</div>
-</nav>
-<!-- Hero Section -->
-<header class="relative h-screen flex items-center justify-center overflow-hidden">
-<div class="absolute inset-0 z-0">
-<img alt="Resort de luxo com piscina e jardim" class="w-full h-full object-cover" data-alt="Luxurious modern house with a crystal clear pool at sunset" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7UJByPXep3nQWYUNYSfIyBpyl7URkG8aWuAbVEnR-DVL_m_ImxKU2XM-bxGBRUX5NmXyx2zPwSAdZUZFtaIjKrSxUt8mS6Xo--N3WKGTolPO4d2LL8cC50H8CVpVKu5kBUl0B47ms6xOE4XeMV_qcQSFub1GgL94cgBx20ho6pa4rDvvC0iMDLpONBQ-63tBgzcNdDeoD4hbt_zJ5UKsjlvJ5bR_4X-HWVhtqlzwytcIr8FIB5EaO2ihTAp2l9zJOACYW5XKf1JX5"/>
-<div class="absolute inset-0 bg-gradient-to-b from-primary/40 to-primary-container/80"></div>
-</div>
-<div class="relative z-10 text-center px-6 max-w-4xl">
-<img alt="Logo Concept" class="w-24 h-24 mx-auto mb-8 rounded-full border-2 border-tertiary-fixed object-cover" data-alt="Elegant minimalist architectural logo symbol" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDi9CIzB3dhuvc-p-TGid_NFhU74iyrdsefPRTomWMErtszX2_SdcL1OmBH0SjlBETdYiTz7x4DNrm2ppne_f2VGCe4bHVQKaNmES9MCT3KCPspcGcEhugjmiTWCING5zzkpBzOXoJUHa1_kxP2audjMdbJkDPXl1PggRrULi6fNbqD-H2sFdu_3opDrL_LmRIJ5VHSy3iyIpqnDyhZE-W83CGYllG_wUE-l4_VyRoT6QtIHcmZW6jknC57nbQqVpHNPj83iumq9ec1"/>
-<h1 class="text-5xl md:text-8xl font-headline font-extrabold text-white tracking-tighter leading-tight mb-6">
-                Seu Refúgio Urbano de Lazer
-            </h1>
-<p class="text-xl md:text-2xl text-on-primary-container/90 mb-10 font-medium max-w-2xl mx-auto">
-                Aproveite cada momento do seu jeito.
-            </p>
-<div class="flex flex-col sm:flex-row gap-4 justify-center">
-<a class="bg-tertiary-fixed text-on-tertiary-fixed px-10 py-5 rounded-full font-headline font-bold text-lg hover:opacity-90 active:scale-95 transition-all shadow-xl" href="#precos">
-                    Reserve sua Data
-                </a>
-<a class="bg-white/10 backdrop-blur-md border border-white/20 text-white px-10 py-5 rounded-full font-headline font-bold text-lg hover:bg-white/20 transition-all" href="#galeria">
-                    Explorar Espaço
-                </a>
-</div>
-</div>
-</header>
-<!-- Sobre o Espaço (Amenities) -->
-<section class="py-32 px-8 bg-surface" id="comodidades">
-<div class="max-w-screen-2xl mx-auto">
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-<div>
-<span class="font-label text-primary font-bold tracking-widest uppercase text-sm">O que oferecemos</span>
-<h2 class="text-4xl md:text-6xl font-headline font-extrabold text-on-surface mt-4 mb-8 leading-tight">
-                        Conforto Editorial em cada detalhe.
-                    </h2>
-<p class="text-lg text-on-surface-variant leading-relaxed mb-12 max-w-xl">
-                        Feito para quem valoriza momentos especiais. Um espaço moderno, completo e pensado para você e sua família.
-                    </p>
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
-<div class="flex items-start gap-4">
-<div class="bg-surface-container-highest p-4 rounded-xl text-primary">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">pool</span>
-</div>
-<div>
-<h4 class="font-headline font-bold text-on-surface">Piscina Aquecida</h4>
-<p class="text-sm text-on-surface-variant">Temperatura agradável 24h por dia.</p>
-</div>
-</div>
-<div class="flex items-start gap-4">
-<div class="bg-surface-container-highest p-4 rounded-xl text-primary">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">outdoor_grill</span>
-</div>
-<div>
-<h4 class="font-headline font-bold text-on-surface">Área Gourmet</h4>
-<p class="text-sm text-on-surface-variant">Churrasqueira completa.</p>
-</div>
-</div>
-<div class="flex items-start gap-4">
-<div class="bg-surface-container-highest p-4 rounded-xl text-primary">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">child_care</span>
-</div>
-<div>
-<h4 class="font-headline font-bold text-on-surface">Espaço Kids</h4>
-<p class="text-sm text-on-surface-variant">Diversão segura para os pequenos.</p>
-</div>
-</div>
-<div class="flex items-start gap-4">
-<div class="bg-surface-container-highest p-4 rounded-xl text-primary">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">wifi</span>
-</div>
-<div>
-<h4 class="font-headline font-bold text-on-surface">Internet Wi-Fi</h4>
-<p class="text-sm text-on-surface-variant">Conectividade em toda a área.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="relative">
-<div class="aspect-[4/5] rounded-[3rem] overflow-hidden shadow-2xl transform lg:translate-x-12">
-<img alt="Vista lateral da piscina" class="w-full h-full object-cover" data-alt="Close up of a turquoise luxury swimming pool" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDE7QpHPt9n7bksecgN6sNejQT7usP-rljYYB_2wLwI74Qo1d_9ppdQHHJhlDCUJKBKerYdMBglDjxOT4KkgLn_6ZUjl6KIaIghzJm3pm2ezE_2Tygw5oraF7cBYV4kFLXaOmtvYo9caS9O3wQKAFYlLYLis-_FiA-F8jgw7BywWGysSmJFbjFPKnn6DiyVDgRWVlZf-JEBreh8bggAaTnO_Q-fy2MQ2iQnMUay7WBE94K3f7OAK67aPCf3fs4j90yOpYGSFRsSC1AC"/>
-</div>
-<div class="absolute -bottom-12 -left-12 hidden md:block w-72 h-72 rounded-[2rem] overflow-hidden border-[12px] border-surface shadow-2xl">
-<img alt="Detalhe área gourmet" class="w-full h-full object-cover" data-alt="Modern outdoor kitchen and grilling area" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdPm2cvj7I6NP3BgY2-zzmerXTAYrYYqAUwci50hPVHtaZAU25E6gEwSR3Q6bhzvpvjDVKyJjlZoUdQ7C0Z3M2SwwDRjI2uI2RznpFjofFMWRTT1mG8KOFtQ2Ftid0BAVXLUWOxGlYlZarDn-cpkLtC2d167VwafSGBhXNYsd4qJ67ia2wr7li4oYsq0Xj0CUjy52WmSc4BbfiyMn6cm18FjA9H-gV5sJpP1XlJBunjMp3ACBZLVsc6DvwmVnaIn7Bj21PHAxecMv3"/>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Galeria (Leisure Carousel style) -->
-<section class="py-32 bg-surface-container-low overflow-hidden" id="galeria">
-<div class="px-8 max-w-screen-2xl mx-auto mb-16">
-<h2 class="text-4xl md:text-6xl font-headline font-extrabold text-on-surface tracking-tighter">Galeria de Experiências</h2>
-</div>
-<div class="flex gap-6 px-8 overflow-x-auto pb-12 snap-x no-scrollbar">
-<div class="flex-none w-[80vw] md:w-[600px] snap-center">
-<div class="aspect-video rounded-3xl overflow-hidden bg-surface-container-highest">
-<img alt="Fachada moderna" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" data-alt="Architectural wide shot of a luxury estate house" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA13SkJrovOIOSVNfdo3pKLeyXQgmC0wsHn2fevqO2h6e-kXcfkzxCEu63lkl0e5-hsQOgCfk9IN4aDfdansO-l2I6FioWtntIBzg6kfmmtvuaD05bYPTvafafyuCztdb4oFwFJFzpx-t4qZmpI_FMtIqWHPtu23kMv8U0Usn36TvwC5pyCc4cNcU1PeeWy5uQGsIY-Cr7nkJO19uQYkSCO2H62nwJcCdZabCvgVs-iAsejwkh4yZey9w05uE3RY-eZMqvPGgiov1sI"/>
-</div>
-</div>
-<div class="flex-none w-[60vw] md:w-[400px] snap-center mt-12">
-<div class="aspect-[3/4] rounded-3xl overflow-hidden bg-surface-container-highest">
-<img alt="Piscina noturna" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" data-alt="Modern swimming pool lit up at night" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbTwYCGm1t3sBVS8flR7wGqxWHCl_wHDBAcDTS9zFrzXiQKJKBjFCDZf0UAw_KgUr3RCf6fiQ6drBEGw9ZjLJDAp2QxhGh0k_mbw_ukzjPtp_pCqqMLza4rzVWMyF93zmjfwSa_Q70DBdjnXGiH2I6HDWiD1j-pihgRyvUBZrIvI25EKVi5MNzlpxanaZ8xf5QYLFbxO6iBXlJZYRpFHZB6SCA9CncKydwNZ0Gh3v0m2Jdf72oMhm4P379tlmwLXgKuTcf9FhRd76v"/>
-</div>
-</div>
-<div class="flex-none w-[80vw] md:w-[500px] snap-center">
-<div class="aspect-square rounded-3xl overflow-hidden bg-surface-container-highest">
-<img alt="Área interna lounge" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" data-alt="Interior luxury lounge with large glass windows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHlE6Vm3us4LNqqM_ol3xLv3eQsa_Z0gfBRqs0RhJk_Eef5XnHjGgFvKehf3WH2lMaGa5UQBPYnHCnWc9VRm76dSgx_A9pyc3_aDGxXgZU94fbtvKgBY0CP1-dFtFE9GmFCvtCaP758Chd_zcOF-cCwmvsv4wyTWd-Tu0TNZRhKek6K72OZx5WI8LgGPzR2vgZwK8HyJVe2zP_t7HUuENxy_hbYeJg5Uj_bsHgdVmkYnWo4vkUJDo2h5wukekdnsxIRJMuy4rpI_G5"/>
-</div>
-</div>
-<div class="flex-none w-[60vw] md:w-[400px] snap-center mt-24">
-<div class="aspect-[4/5] rounded-3xl overflow-hidden bg-surface-container-highest">
-<img alt="Jardim e deck" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" data-alt="Lush green garden with wooden deck chairs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQp-697OA2DItQG3fUIQQvrJAVkvy9urtHAvnz88wUFtXTuxvKb4_VdB2o24Qbb9hQtY5wFEqaC8I8_82QaogWdkAbwQelVVXjlmyAIfNWBFUyNI9TdXBjE1kFN6dLeFs3FyY1MAieJIldJXwdZzy3OSLEe_OkA6OMJ4E43OG9Dxi_MkMXeQRaCISzNeJHzhBh1ROFeIaXdiXqaFTFGHWK8LqPrcPVdMtu8OUCJ1xJJ14K45AqhTSUzjn4k9MFwg3zblNPmowiUuPb"/>
-</div>
-</div>
-</div>
-</section>
-<!-- Preços e Disponibilidade -->
-<section class="py-32 px-8 bg-surface" id="precos">
-<div class="max-w-screen-2xl mx-auto">
-<div class="flex flex-col lg:flex-row gap-16">
-<div class="flex-1">
-<span class="font-label text-secondary font-bold tracking-widest uppercase text-sm">Investimento &amp; Tempo</span>
-<h2 class="text-4xl md:text-5xl font-headline font-extrabold text-on-surface mt-4 mb-6">Valores e Disponibilidade</h2>
-<div class="bg-surface-container-low p-8 rounded-3xl mb-8">
-<p class="text-sm text-on-surface-variant uppercase font-bold tracking-tighter mb-2">A partir de</p>
-<div class="flex items-baseline gap-2">
-<span class="text-5xl font-headline font-extrabold text-primary">R$ 750</span>
-<span class="text-on-surface-variant font-medium">/ diária</span>
-</div>
-<p class="mt-6 text-on-surface-variant text-sm">*Valores variam de acordo com a temporada. Consulte pacotes especiais para eventos.</p>
-</div>
-<div class="space-y-4">
-<div class="flex items-center justify-between p-4 bg-surface-container-highest/50 rounded-xl">
-<span class="font-medium">Segunda a Quinta</span>
-<span class="font-bold text-primary">R$ 750/dia</span>
-</div>
-<div class="flex items-center justify-between p-4 bg-surface-container-highest/50 rounded-xl">
-<span class="font-medium">Sexta a Domingo</span>
-<span class="font-bold text-primary">R$ 750/dia</span>
-</div>
-<div class="flex items-center justify-between p-4 bg-surface-container-highest/50 rounded-xl">
-<span class="font-medium">Adicional - 2 Quartos e 1 Banheiro</span>
-<span class="font-bold text-primary">+R$ 150</span>
-</div>
-</div>
-</div>
-<div class="flex-1 bg-surface-container-lowest p-8 rounded-[2.5rem] shadow-[0px_20px_40px_rgba(30,27,21,0.06)]">
-<div class="flex items-center justify-between mb-8">
-<h3 class="font-headline font-bold text-xl">Março 2026</h3>
-<div class="flex gap-2">
-<button class="p-2 hover:bg-surface-container rounded-full transition-colors"><span class="material-symbols-outlined">chevron_left</span></button>
-<button class="p-2 hover:bg-surface-container rounded-full transition-colors"><span class="material-symbols-outlined">chevron_right</span></button>
-</div>
-</div>
-<div class="grid grid-cols-7 gap-2 mb-4 text-center">
-<div class="text-xs font-bold text-on-surface-variant/50">DOM</div>
-<div class="text-xs font-bold text-on-surface-variant/50">SEG</div>
-<div class="text-xs font-bold text-on-surface-variant/50">TER</div>
-<div class="text-xs font-bold text-on-surface-variant/50">QUA</div>
-<div class="text-xs font-bold text-on-surface-variant/50">QUI</div>
-<div class="text-xs font-bold text-on-surface-variant/50">SEX</div>
-<div class="text-xs font-bold text-on-surface-variant/50">SÁB</div>
-</div>
-<div class="grid grid-cols-7 gap-2 text-center">
-<!-- Simplified Calendar Visualization -->
-<div class="p-3 text-on-surface-variant/30">29</div>
-<div class="p-3 text-on-surface-variant/30">30</div>
-<div class="p-3 font-bold bg-surface-container-high rounded-xl">1</div>
-<div class="p-3 font-bold bg-surface-container-high rounded-xl">2</div>
-<div class="p-3 font-bold bg-surface-container-high rounded-xl">3</div>
-<div class="p-3 font-bold bg-error-container text-on-error-container rounded-xl line-through">4</div>
-<div class="p-3 font-bold bg-error-container text-on-error-container rounded-xl line-through">5</div>
-<div class="p-3 font-bold bg-error-container text-on-error-container rounded-xl line-through">6</div>
-<div class="p-3 font-bold bg-surface-container-high rounded-xl">7</div>
-<div class="p-3 font-bold bg-surface-container-high rounded-xl">8</div>
-<div class="p-3 font-bold bg-surface-container-high rounded-xl">9</div>
-<div class="p-3 font-bold bg-surface-container-high rounded-xl">10</div>
-<div class="p-3 font-bold bg-primary text-white rounded-xl ring-4 ring-primary/20">11</div>
-<div class="p-3 font-bold bg-surface-container-high rounded-xl">12</div>
-<!-- ... rest of calendar ... -->
-<div class="p-3 font-bold bg-surface-container-high rounded-xl">13</div>
-<div class="p-3 font-bold bg-surface-container-high rounded-xl">14</div>
-<div class="p-3 font-bold bg-surface-container-high rounded-xl">15</div>
-<div class="p-3 font-bold bg-surface-container-high rounded-xl">16</div>
-<div class="p-3 font-bold bg-surface-container-high rounded-xl">17</div>
-<div class="p-3 font-bold bg-error-container text-on-error-container rounded-xl line-through">18</div>
-<div class="p-3 font-bold bg-error-container text-on-error-container rounded-xl line-through">19</div>
-</div>
-<div class="mt-8 flex gap-6 text-xs font-bold">
-<div class="flex items-center gap-2">
-<div class="w-3 h-3 bg-surface-container-high rounded-full"></div>
-<span>DISPONÍVEL</span>
-</div>
-<div class="flex items-center gap-2">
-<div class="w-3 h-3 bg-error-container rounded-full"></div>
-<span>RESERVADO</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Avaliações -->
-<section class="py-32 px-8 bg-surface-container-low">
-<div class="max-w-screen-2xl mx-auto">
-<h2 class="text-4xl md:text-5xl font-headline font-extrabold text-on-surface text-center mb-20 tracking-tight">O que dizem nossos hóspedes</h2>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<div class="bg-white p-10 rounded-[2.5rem] shadow-[0px_20px_40px_rgba(30,27,21,0.04)]">
-<div class="flex text-tertiary-fixed-dim mb-6">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-</div>
-<p class="text-lg italic text-on-surface-variant mb-8 leading-relaxed">"Lugar impecável! A piscina aquecida fez toda a diferença para as crianças. A estrutura é de cinema."</p>
-<div class="flex items-center gap-4">
-<div class="w-12 h-12 rounded-full bg-surface-container-highest overflow-hidden">
-<img alt="User" data-alt="Portrait of a smiling woman" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBBUHxVOF0L88D2Um56H8KXONKgVkKyhNIwPv-3Ro3Fy5auEwoCSCOxc72ZHXXP8ZHiczwnxPw7DCOZgBNrD9wwibE3EMcNV7OrIBv6uUZefom1yyaw5wY-kPnRXiwd6HCdcor3CF_wc2AD0jz875IMoQEvv_Bfo2t_VgK2SzUlwjIIrOdNI2apxqTvSnD61mwolGKIkD2s4zFaHBQamPO3ZaPW2qZuFsUMY2802sSzqzFa5Np5wEIphg2_yi0w4zD9ZLKXuJILY0q"/>
-</div>
-<div>
-<p class="font-bold text-on-surface">Mariana Silva</p>
-<p class="text-xs text-on-surface-variant uppercase tracking-widest">Empresária</p>
-</div>
-</div>
-</div>
-<div class="bg-white p-10 rounded-[2.5rem] shadow-[0px_20px_40px_rgba(30,27,21,0.04)] md:translate-y-8">
-<div class="flex text-tertiary-fixed-dim mb-6">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-</div>
-<p class="text-lg italic text-on-surface-variant mb-8 leading-relaxed">"Comemorei meu aniversário e foi perfeito. A área gourmet é muito completa e o espaço é muito privativo."</p>
-<div class="flex items-center gap-4">
-<div class="w-12 h-12 rounded-full bg-surface-container-highest overflow-hidden">
-<img alt="User" data-alt="Portrait of a smiling man" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAY3LnZzmevwtgkJ952IcVtxduEu7tB9f11Py-5Z0YGkySHoUTnbdJRSr0Kmyd5vAPDWSo1M0Fous3uVHTdn5putezJKx5fQiNbFyBUIyTsDqj0JxjD2tQTF3rSDXFj0QRvMZQaFvUvAicCRHu_N2XBgDEdMoa6hGqBKSRlGixN3VsfCQ-T16Djx2FX7bIINygyaPZ6qNHW_v0hlLYMv9z73jS0x6KBnki6vuD4C8LT9xEHBJSzKEg747D1BmkGQTiNZouKwskbk_pU"/>
-</div>
-<div>
-<p class="font-bold text-on-surface">Ricardo Mendonça</p>
-<p class="text-xs text-on-surface-variant uppercase tracking-widest">Arquiteto</p>
-</div>
-</div>
-</div>
-<div class="bg-white p-10 rounded-[2.5rem] shadow-[0px_20px_40px_rgba(30,27,21,0.04)]">
-<div class="flex text-tertiary-fixed-dim mb-6">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-</div>
-<p class="text-lg italic text-on-surface-variant mb-8 leading-relaxed">"O atendimento é excepcional e o espaço estava brilhando. Recomendo para famílias que buscam sossego."</p>
-<div class="flex items-center gap-4">
-<div class="w-12 h-12 rounded-full bg-surface-container-highest overflow-hidden">
-<img alt="User" data-alt="Portrait of a smiling woman in nature" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQb0HeW_TQ7FjcX8bhTh86lvrx3i3L3fHIYi_jJm-c7p4L50kl5ydGsTDsvi49EVhq2cUDvPIdIDoZMqjel6HtZzAcIVXmNt-x_Jb1J-7jTyyeI92dd6R_Nl6JStULTIWcYN676Cwa4iZ22BZspyaDPU32EfsxoPtiZss6Vy-W30fC9uQFQIK67wh1aoOioNd83jBuqmDc0XAZyvF2yMZ3DJqGp_XQgXmAHofXXCMJvV7DqtIsum7Ua6NkgIM7P0THdx8IbI9cT3fD"/>
-</div>
-<div>
-<p class="font-bold text-on-surface">Ana Luiza Costa</p>
-<p class="text-xs text-on-surface-variant uppercase tracking-widest">Designer</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Regras da Casa -->
-<section class="py-32 px-8 bg-surface" id="regras">
-<div class="max-w-4xl mx-auto">
-<div class="text-center mb-16">
-<span class="font-label text-primary font-bold tracking-widest uppercase text-sm">Bom Convívio</span>
-<h2 class="text-4xl font-headline font-extrabold text-on-surface mt-4">Regras da Casa</h2>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-8">
-<div class="flex items-center gap-4 p-6 bg-surface-container-low rounded-2xl">
-<span class="material-symbols-outlined text-primary">smoke_free</span>
-<span class="font-medium text-on-surface">Proibido fumar em áreas internas</span>
-</div>
-<div class="flex items-center gap-4 p-6 bg-surface-container-low rounded-2xl">
-<span class="material-symbols-outlined text-primary">groups</span>
-<span class="font-medium text-on-surface">Capacidade máxima: 50 pessoas</span>
-</div>
-<div class="flex items-center gap-4 p-6 bg-surface-container-low rounded-2xl">
-<span class="material-symbols-outlined text-primary">volume_off</span>
-<span class="font-medium text-on-surface">Lei do silêncio após às 22h</span>
-</div>
-<div class="flex items-center gap-4 p-6 bg-surface-container-low rounded-2xl">
-<span class="material-symbols-outlined text-primary">pets</span>
-<span class="font-medium text-on-surface">Aceitamos pets de pequeno porte</span>
-</div>
-<div class="flex items-center gap-4 p-6 bg-surface-container-low rounded-2xl">
-<span class="material-symbols-outlined text-primary">cleaning_services</span>
-<span class="font-medium text-on-surface">Taxa de limpeza inclusa</span>
-</div>
-<div class="flex items-center gap-4 p-6 bg-surface-container-low rounded-2xl">
-<span class="material-symbols-outlined text-primary">verified_user</span>
-<span class="font-medium text-on-surface">Respeite a vizinhança local</span>
-</div>
-</div>
-</div>
-</section>
-<!-- Final CTA -->
-<section class="py-32 px-8 relative overflow-hidden">
-<div class="absolute inset-0 bg-primary-container z-0"></div>
-<div class="relative z-10 max-w-4xl mx-auto text-center text-white">
-<h2 class="text-5xl md:text-7xl font-headline font-extrabold mb-8 tracking-tighter">Pronto para relaxar?</h2>
-<p class="text-xl md:text-2xl text-on-primary-container/80 mb-12">Estamos aguardando seu contato para tornar seu próximo evento especial.</p>
-<a class="inline-flex items-center gap-4 bg-[#25D366] text-white px-12 py-6 rounded-full font-headline font-extrabold text-xl hover:scale-105 active:scale-95 transition-all shadow-2xl" href="#">
-<span>Falar no WhatsApp</span>
-<span class="material-symbols-outlined">chat_bubble</span>
-</a>
-<div class="mt-20 flex flex-wrap justify-center gap-12 opacity-50 text-sm font-label uppercase tracking-widest">
-<span>Espaço Privativo</span>
-<span>Atendimento VIP</span>
-<span>Qualidade Premium</span>
-</div>
-</div>
-</section>
-<!-- Footer -->
-<footer class="w-full py-12 bg-[#faf3e8]">
-<div class="flex flex-col md:flex-row justify-between items-center px-12 gap-8 max-w-screen-2xl mx-auto">
-<div class="text-xl font-bold text-[#145F48] font-headline">
-                Lazer Terra Verde
+            <div class="fcard-bot">
+              <span class="fcard-line">CORE</span>
+              <span class="fcard-name">Whey Core</span>
+              <span class="fcard-desc">Proteína concentrada do soro do leite.</span>
+              <span class="fcard-link">Ver produto →</span>
             </div>
-<div class="flex flex-wrap justify-center gap-8 text-[#145F48]/60 font-['Manrope'] text-sm uppercase tracking-widest">
-<a class="hover:text-[#145F48] underline-offset-4 hover:underline transition-all" href="#">Termos de Uso</a>
-<a class="hover:text-[#145F48] underline-offset-4 hover:underline transition-all" href="#">Privacidade</a>
-<a class="hover:text-[#145F48] underline-offset-4 hover:underline transition-all" href="#">Contato</a>
-<a class="hover:text-[#145F48] underline-offset-4 hover:underline transition-all" href="#">Localização</a>
-</div>
-<div class="text-[#145F48]/60 font-['Manrope'] text-sm uppercase tracking-widest text-center md:text-right">
-                © 2024 Lazer Terra Verde. A experiência do Modern Estate.
+          </div>
+
+          <div class="fcard" onclick="showProduct('pure-protein')" data-glow="pure">
+            <div class="fcard-top bg-green">
+              <span class="fcard-badge b-blue">Lançamento</span>
+              <img src="images/pure-protein.png" alt="Pure Protein" onerror="this.style.display='none'" />
             </div>
-</div>
-</footer>
-</body></html>
+            <div class="fcard-bot">
+              <span class="fcard-line">PURE</span>
+              <span class="fcard-name">Pure Protein</span>
+              <span class="fcard-desc">Proteína vegetal de alta qualidade.</span>
+              <span class="fcard-link">Ver produto →</span>
+            </div>
+          </div>
+
+          <div class="fcard" onclick="showProduct('mind-focus')" data-glow="mind">
+            <div class="fcard-top bg-purple">
+              <span class="fcard-badge b-purple">Em Alta</span>
+              <img src="images/mind-focus.png" alt="Mind+ Focus" onerror="this.style.display='none'" />
+            </div>
+            <div class="fcard-bot">
+              <span class="fcard-line">MIND+</span>
+              <span class="fcard-name">Mind+ Focus</span>
+              <span class="fcard-desc">Foco e concentração para o dia a dia.</span>
+              <span class="fcard-link">Ver produto →</span>
+            </div>
+          </div>
+
+          <div class="fcard" onclick="showProduct('hydrate-electrolytes')" data-glow="hydrate">
+            <div class="fcard-top bg-cyan">
+              <span class="fcard-badge b-cyan">Essencial</span>
+              <img src="images/hydrate-electrolytes.png" alt="Hydrate Electrolytes" onerror="this.style.display='none'" />
+            </div>
+            <div class="fcard-bot">
+              <span class="fcard-line">HYDRATE</span>
+              <span class="fcard-name">Hydrate Electrolytes</span>
+              <span class="fcard-desc">Eletrólitos essenciais para hidratação.</span>
+              <span class="fcard-link">Ver produto →</span>
+            </div>
+          </div>
+
+          <div class="fcard" onclick="showProduct('pre-ignite')" data-glow="core">
+            <div class="fcard-top bg-dark">
+              <span class="fcard-badge">Mais Força</span>
+              <img src="images/pre-ignite.png" alt="Pre Ignite" onerror="this.style.display='none'" />
+            </div>
+            <div class="fcard-bot">
+              <span class="fcard-line">CORE</span>
+              <span class="fcard-name">Pre Ignite</span>
+              <span class="fcard-desc">Energia e performance para treinos.</span>
+              <span class="fcard-link">Ver produto →</span>
+            </div>
+          </div>
+
+          <div class="fcard" onclick="showProduct('pure-bar')" data-glow="pure">
+            <div class="fcard-top bg-green">
+              <span class="fcard-badge b-green">Snack Saudável</span>
+              <img src="images/pure-bar.png" alt="Pure Bar" onerror="this.style.display='none'" />
+            </div>
+            <div class="fcard-bot">
+              <span class="fcard-line">PURE</span>
+              <span class="fcard-name">Pure Bar</span>
+              <span class="fcard-desc">Barra vegana de cacau e avelã.</span>
+              <span class="fcard-link">Ver produto →</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PROVA SOCIAL (REVIEWS) -->
+    <section class="reviews-section">
+      <div class="reviews-header">
+        <h2>O que dizem de nós.</h2>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"O Whey Core é simplesmente o melhor que já provei. Não me deixa estufado e o sabor é incrível. Virou parte da rotina!"</p>
+          <div class="review-author">
+            <div class="review-avatar">RC</div>
+            <div>
+              <span class="review-name">Rafael Costa</span>
+              <span class="review-badge">Cliente Verificado</span>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Uso o Mind+ Focus para estudar e a diferença é brutal. Consigo manter a concentração por horas sem aquela quebra de energia."</p>
+          <div class="review-author">
+            <div class="review-avatar">LM</div>
+            <div>
+              <span class="review-name">Letícia Mendes</span>
+              <span class="review-badge">Cliente Verificado</span>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"A transparência da Murilabs ganhou-me logo. Saber que não tem corantes nem aditivos artificiais dá muita paz de espírito."</p>
+          <div class="review-author">
+            <div class="review-avatar">TS</div>
+            <div>
+              <span class="review-name">Tiago Silva</span>
+              <span class="review-badge">Cliente Verificado</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VALORES -->
+    <section class="values-section">
+      <div class="values-inner">
+        <div class="values-text">
+          <p class="section-label">Por que Murilabs</p>
+          <h2>Transparência<br>sempre.</h2>
+          <p class="values-desc">Fórmulas inteligentes com ingredientes de origem real, testadas e aprovadas. Feito no Brasil, com orgulho.</p>
+          <button class="btn-primary" onclick="showPage('sobre')">Conhecer a marca</button>
+        </div>
+        <div class="values-grid-right">
+          <div class="value-item">
+            <div class="value-icon">◎</div>
+            <h4>Ciência que transforma</h4>
+            <p>Fórmulas baseadas em evidências.</p>
+          </div>
+          <div class="value-item">
+            <div class="value-icon">◈</div>
+            <h4>Qualidade sem excessos</h4>
+            <p>Sem corantes, sem aromas artificiais.</p>
+          </div>
+          <div class="value-item">
+            <div class="value-icon">◇</div>
+            <h4>Transparência sempre</h4>
+            <p>Você vê, você confia.</p>
+          </div>
+          <div class="value-item">
+            <div class="value-icon">△</div>
+            <h4>Evolução constante</h4>
+            <p>Desenvolvido no Brasil, para a nossa realidade.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats-section">
+      <div class="stat"><span class="stat-num">5</span><span class="stat-label">Linhas de produto</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-num">25+</span><span class="stat-label">Produtos ativos</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-num">100%</span><span class="stat-label">Feito no Brasil</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-num">Clean</span><span class="stat-label">Label garantido</span></div>
+    </section>
+
+  </div>
+  <!-- END HOME -->
+
+  <!-- ======================== PRODUTOS ======================== -->
+  <div id="page-produtos" class="page">
+
+    <section class="products-hero">
+      <p class="section-label" id="products-line-label">Todos os produtos</p>
+      <h1 class="products-hero-title">O que o seu corpo<br>precisa hoje.</h1>
+    </section>
+
+    <!-- LINE FILTER -->
+    <div class="line-filter">
+      <button class="filter-btn active" data-filter="all" onclick="filterProducts(this, 'all')">Todos</button>
+      <button class="filter-btn" data-filter="core" onclick="filterProducts(this, 'core')">Core</button>
+      <button class="filter-btn" data-filter="next" onclick="filterProducts(this, 'next')">Next</button>
+      <button class="filter-btn" data-filter="pure" onclick="filterProducts(this, 'pure')">Pure</button>
+      <button class="filter-btn" data-filter="hydrate" onclick="filterProducts(this, 'hydrate')">Hydrate</button>
+      <button class="filter-btn" data-filter="mind" onclick="filterProducts(this, 'mind')">Mind+</button>
+    </div>
+
+    <!-- PRODUCTS GRID -->
+    <section class="products-grid-section">
+      <div class="products-grid" id="productsGrid">
+
+        <!-- CORE -->
+        <div class="product-card" data-line="core" onclick="showProduct('whey-core')">
+          <div class="pc-visual pc--dark">
+            <img src="images/whey-core.png" class="pc-img" alt="" onerror="this.style.display='none'" />
+            <div class="product-mock pm--dark pm--sm">
+              <span class="pm-brand">murilabs</span>
+              <span class="pm-name">WHEY<br>CORE.</span>
+            </div>
+          </div>
+          <div class="pc-info">
+            <span class="pc-line">CORE</span>
+            <h3 class="pc-name">Whey Core</h3>
+            <p class="pc-desc">Proteína concentrada · 900g · 21g/dose</p>
+            <span class="pc-price">R$ 149,90</span>
+          </div>
+        </div>
+
+        <div class="product-card" data-line="core" onclick="showProduct('creatine-core')">
+          <div class="pc-visual pc--dark">
+            <img src="images/creatine-core.png" class="pc-img" alt="" onerror="this.style.display='none'" />
+            <div class="product-mock pm--dark pm--sm">
+              <span class="pm-brand">murilabs</span>
+              <span class="pm-name">CREATINE<br>CORE.</span>
+            </div>
+          </div>
+          <div class="pc-info">
+            <span class="pc-line">CORE</span>
+            <h3 class="pc-name">Creatine Core</h3>
+            <p class="pc-desc">Creatina 100% pura · 300g</p>
+            <span class="pc-price">R$ 89,90</span>
+          </div>
+        </div>
+
+        <div class="product-card" data-line="core" onclick="showProduct('pre-ignite')">
+          <div class="pc-visual pc--dark">
+            <img src="images/pre-ignite.png" class="pc-img" alt="" onerror="this.style.display='none'" />
+            <div class="product-mock pm--dark pm--sm">
+              <span class="pm-brand">murilabs</span>
+              <span class="pm-name">PRE<br>IGNITE.</span>
+            </div>
+          </div>
+          <div class="pc-info">
+            <span class="pc-line">CORE</span>
+            <h3 class="pc-name">Pre Ignite</h3>
+            <p class="pc-desc">Energia · Foco · Performance · 300g</p>
+          </div>
+        </div>
+
+        <div class="product-card" data-line="core" onclick="showProduct('recover-restore')">
+          <div class="pc-visual pc--dark">
+            <img src="images/recover-restore.png" class="pc-img" alt="" onerror="this.style.display='none'" />
+            <div class="product-mock pm--dark pm--sm">
+              <span class="pm-brand">murilabs</span>
+              <span class="pm-name">RECOVER<br>RESTORE.</span>
+            </div>
+          </div>
+          <div class="pc-info">
+            <span class="pc-line">CORE</span>
+            <h3 class="pc-name">Recover Restore</h3>
+            <p class="pc-desc">Recuperação pós-treino · 500g</p>
+            <span class="pc-price">R$ 129,90</span>
+          </div>
+        </div>
+
+        <div class="product-card" data-line="core" onclick="showProduct('focus-mind-core')">
+          <div class="pc-visual pc--dark">
+            <img src="images/focus-mind-core.png" class="pc-img" alt="" onerror="this.style.display='none'" />
+            <div class="product-mock pm--dark pm--sm">
+              <span class="pm-brand">murilabs</span>
+              <span class="pm-name">FOCUS<br>MIND.</span>
+            </div>
+          </div>
+          <div class="pc-info">
+            <span class="pc-line">CORE</span>
+            <h3 class="pc-name">Focus Mind</h3>
+            <p class="pc-desc">Foco · Memória · Clareza · 60 cáps</p>
+            <span class="pc-price">R$ 89,90</span>
+          </div>
+        </div>
+
+        <div class="product-card" data-line="core" onclick="showProduct('fuel-bar')">
+          <div class="pc-visual pc--dark">
+            <img src="images/fuel-bar.png" class="pc-img" alt="" onerror="this.style.display='none'" />
+            <div class="product-mock pm--dark pm--sm">
+              <span class="pm-brand">murilabs</span>
+              <span class="pm-name">FUEL<br>BAR.</span>
+            </div>
+          </div>
+          <div class="pc-info">
+            <span class="pc-line">CORE</span>
+            <h3 class="pc-name">Fuel Bar</h3>
+            <p class="pc-desc">Barra proteica · 12g proteína · 60g</p>
+            <span class="pc-price">R$ 12,90</span>
+          </div>
+        </div>
+
+        <!-- NEXT -->
+        <div class="product-card" data-line="next" onclick="showProduct('whey-next')">
+          <div class="pc-visual pc--blue">
+            <img src="images/whey-next.png" class="pc-img" alt="" onerror="this.style.display='none'" />
+            <div class="product-mock pm--blue pm--sm">
+              <span class="pm-brand">murilabs next.</span>
+              <span class="pm-name">WHEY<br>NEXT.</span>
+            </div>
+          </div>
+          <div class="pc-info">
+            <span class="pc-line">NEXT</span>
+            <h3 class="pc-name">Whey Next</h3>
+            <p class="pc-desc">Proteína concentrada · 900g · 21g/dose</p>
+            <span class="pc-price">R$ 179,90</span>
+          </div>
+        </div>
+
+        <div class="product-card" data-line="next" onclick="showProduct('focus-next')">
+          <div class="pc-visual pc--blue">
+            <img src="images/focus-next.png" class="pc-img" alt="" onerror="this.style.display='none'" />
+            <div class="product-mock pm--blue pm--sm">
+              <span class="pm-brand">murilabs next.</span>
+              <span class="pm-name">FOCUS<br>NEXT.</span>
+            </div>
+          </div>
+          <div class="pc-info">
+            <span class="pc-line">NEXT</span>
+            <h3 class="pc-name">Focus Next</h3>
+            <p class="pc-desc">Foco e concentração · 60 cápsulas</p>
+            <span class="pc-price">R$ 109,90</span>
+          </div>
+        </div>
+
+        <div class="product-card" data-line="next" onclick="showProduct('energy-next')">
+          <div class="pc-visual pc--teal">
+            <img src="images/energy-next.png" class="pc-img" alt="" onerror="this.style.display='none'" />
+            <div class="product-mock pm--teal pm--sm">
+              <span class="pm-brand">murilabs next.</span>
+              <span class="pm-name">ENERGY<br>NEXT.</span>
+            </div>
+          </div>
+          <div class="pc-info">
+            <span class="pc-line">NEXT</span>
+            <h3 class="pc-name">Energy Next</h3>
+            <p class="pc-desc">Energia para o dia · Low açúcar · 30 doses</p>
+            <span class="pc-price">R$ 139,90</span>
+          </div>
+        </div>
+
+        <div class="product-card" data-line="next" onclick="showProduct('pre-next')">
+          <div class="pc-visual pc--purple">
+            <img src="images/pre-next.png" class="pc-img" alt="" onerror="this.style.display='none'" />
+            <div class="product-mock pm--purple-dark pm--sm">
+              <span class="pm-brand">murilabs next.</span>
+              <span class="pm-name">PRE<br>NEXT.</span>
+            </div>
+          </div>
+          <div class="pc-info">
+            <span class="pc-line">NEXT</span>
+            <h3 class="pc-name">Pre Next</h3>
+            <p class="pc-desc">Pré-treino · Energia · Foco · 300g</p>
+            <span class="pc-price">R$ 159,90</span>
+          </div>
+        </div>
+
+        <div class="product-card" data-line="next" onclick="showProduct('bar-next')">
+          <div class="pc-visual pc--teal">
+            <img src="images/bar-next.png" class="pc-img" alt="" onerror="this.style.display='none'" />
+            <div class="product-mock pm--teal pm--sm">
+              <span class="pm-brand">murilabs next.</span>
+              <span class="pm-name">BAR<br>NEXT.</span>
+            </div>
+          </div>
+          <div class="pc-info">
+            <span class="pc-line">NEXT</span>
+            <h3 class="pc-name">Bar Next</h3>
+            <p class="pc-desc">Barra de proteína · 12g proteína · 60g</p>
+            <span class="pc-price">R$ 14,90</span>
+          </div>
+        </div>
+
+        <!-- PURE -->
+        <div class="product-card" data-line="pure" onclick="showProduct('pure-protein')">
+          <div class="pc-visual pc--green">
+            <img src="images/pure-protein.png" class="pc-img" alt="" onerror="this.style.display='none'" />
+            <div class="product-mock pm--green pm--sm">
+              <span class="pm-brand">murilabs</span>
+              <span class="pm-name">PURE<br>PROTEIN</span>
+            </div>
+          </div>
+          <div class="pc-info">
+            <span class="pc-line">PURE</span>
+            <h3 class="pc-name">Pure Protein</h3>
+            <p class="pc-desc">Proteína vegetal · 900g · 20g/dose</p>
+          </div>
+        </div>
+
+        <div class="product-card" data-line="pure" onclick="showProduct('pure-creatine')">
+          <div class="pc-visual pc--green">
+            <img src="images/pure-creatine.png" class="pc-img" alt="" onerror="this.style.display='none'" />
+            <div class="product-mock pm--green pm--sm">
+              <span class="pm-brand">murilabs</span>
+              <span class="pm-name">PURE<br>CREATINE</span>
+            </div>
+          </div>
+          <div class="pc-info">
+            <span class="pc-line">PURE</span>
+            <h3 class="pc-name">Pure Creatine</h3>
+            <p class="pc-desc">Creatina 100% pura · Vegana · 200g</p>
+            <span class="pc-price">R$ 119,90</span>
+          </div>
+        </div>
+
+        <div class="product-card" data-line="pure" onclick="showProduct('pure-daily')">
+          <div class="pc-visual pc--green">
+            <img src="images/pure-daily.png" class="pc-img" alt="" onerror="this.style.display='none'" />
+            <div class="product-mock pm--green pm--sm">
+              <span class="pm-brand">murilabs</span>
+              <span class="pm-name">PURE<br>DAILY</span>
+            </div>
+          </div>
+          <div class="pc-info">
+            <span class="pc-line">PURE</span>
+            <h3 class="pc-name">Pure Daily</h3>
+            <p class="pc-desc">Multivitamínico · Vegano · 60 cápsulas</p>
+            <span class="pc-price">R$ 79,90</span>
+          </div>
+        </div>
+
+        <div class="product-card" data-line="pure" onclick="showProduct('pure-bar')">
+          <div class="pc-visual pc--green">
+            <img src="images/pure-bar.png" class="pc-img" alt="" onerror="this.style.display='none'" />
+            <div class="product-mock pm--green pm--sm">
+              <span class="pm-brand">murilabs</span>
+              <span class="pm-name">PURE<br>BAR</span>
+            </div>
+          </div>
+          <div class="pc-info">
+            <span class="pc-line">PURE</span>
+            <h3 class="pc-name">Pure Bar</h3>
+            <p class="pc-desc">Cacau & Avelã · 10g proteína · 50g</p>
+          </div>
+        </div>
+
+        <!-- HYDRATE -->
+        <div class="product-card" data-line="hydrate" onclick="showProduct('hydrate-electrolytes')">
+          <div class="pc-visual pc--cyan">
+            <img src="images/hydrate-electrolytes.png" class="pc-img" alt="" onerror="this.style.display='none'" />
+            <div class="product-mock pm--cyan pm--sm">
+              <span class="pm-brand">murilabs</span>
+              <span class="pm-name">HYDRATE<br>ELECTRO</span>
+            </div>
+          </div>
+          <div class="pc-info">
+            <span class="pc-line">HYDRATE</span>
+            <h3 class="pc-name">Hydrate Electrolytes</h3>
+            <p class="pc-desc">Eletrólitos essenciais · 300g · 30 doses</p>
+          </div>
+        </div>
+
+        <div class="product-card" data-line="hydrate" onclick="showProduct('hydrate-energy')">
+          <div class="pc-visual pc--cyan">
+            <img src="images/hydrate-energy.png" class="pc-img" alt="" onerror="this.style.display='none'" />
+            <div class="product-mock pm--cyan pm--sm">
+              <span class="pm-brand">murilabs</span>
+              <span class="pm-name">HYDRATE<br>ENERGY</span>
+            </div>
+          </div>
+          <div class="pc-info">
+            <span class="pc-line">HYDRATE</span>
+            <h3 class="pc-name">Hydrate Energy</h3>
+            <p class="pc-desc">Eletrólitos + Energia · 300g</p>
+            <span class="pc-price">R$ 109,90</span>
+          </div>
+        </div>
+
+        <div class="product-card" data-line="hydrate" onclick="showProduct('hydrate-zero')">
+          <div class="pc-visual pc--cyan">
+            <img src="images/hydrate-zero.png" class="pc-img" alt="" onerror="this.style.display='none'" />
+            <div class="product-mock pm--cyan pm--sm">
+              <span class="pm-brand">murilabs</span>
+              <span class="pm-name">HYDRATE<br>ZERO</span>
+            </div>
+          </div>
+          <div class="pc-info">
+            <span class="pc-line">HYDRATE</span>
+            <h3 class="pc-name">Hydrate Zero</h3>
+            <p class="pc-desc">Sem açúcar · Sem sabor · 300g</p>
+            <span class="pc-price">R$ 89,90</span>
+          </div>
+        </div>
+
+        <div class="product-card" data-line="hydrate" onclick="showProduct('hydrate-tablets')">
+          <div class="pc-visual pc--cyan">
+            <img src="images/hydrate-tablets.png" class="pc-img" alt="" onerror="this.style.display='none'" />
+            <div class="product-mock pm--cyan pm--sm">
+              <span class="pm-brand">murilabs</span>
+              <span class="pm-name">HYDRATE<br>TABLETS</span>
+            </div>
+          </div>
+          <div class="pc-info">
+            <span class="pc-line">HYDRATE</span>
+            <h3 class="pc-name">Hydrate Tablets</h3>
+            <p class="pc-desc">Eletrólitos em tablet · 60 unidades</p>
+            <span class="pc-price">R$ 69,90</span>
+          </div>
+        </div>
+
+        <div class="product-card" data-line="hydrate" onclick="showProduct('hydrate-drink')">
+          <div class="pc-visual pc--cyan">
+            <img src="images/hydrate-drink.png" class="pc-img" alt="" onerror="this.style.display='none'" />
+            <div class="product-mock pm--cyan pm--sm">
+              <span class="pm-brand">murilabs</span>
+              <span class="pm-name">HYDRATE<br>DRINK</span>
+            </div>
+          </div>
+          <div class="pc-info">
+            <span class="pc-line">HYDRATE</span>
+            <h3 class="pc-name">Hydrate Drink</h3>
+            <p class="pc-desc">Bebida pronta · Eletrólitos · 500ml</p>
+            <span class="pc-price">R$ 9,90</span>
+          </div>
+        </div>
+
+        <!-- MIND+ -->
+        <div class="product-card" data-line="mind" onclick="showProduct('mind-focus')">
+          <div class="pc-visual pc--lilac">
+            <img src="images/mind-focus.png" class="pc-img" alt="" onerror="this.style.display='none'" />
+            <div class="product-mock pm--lilac pm--sm">
+              <span class="pm-brand">murilabs</span>
+              <span class="pm-name">MIND+<br>FOCUS</span>
+            </div>
+          </div>
+          <div class="pc-info">
+            <span class="pc-line">MIND+</span>
+            <h3 class="pc-name">Mind+ Focus</h3>
+            <p class="pc-desc">Foco e concentração · 60 cápsulas</p>
+          </div>
+        </div>
+
+        <div class="product-card" data-line="mind" onclick="showProduct('mind-memory')">
+          <div class="pc-visual pc--lilac">
+            <img src="images/mind-memory.png" class="pc-img" alt="" onerror="this.style.display='none'" />
+            <div class="product-mock pm--lilac pm--sm">
+              <span class="pm-brand">murilabs</span>
+              <span class="pm-name">MIND+<br>MEMORY</span>
+            </div>
+          </div>
+          <div class="pc-info">
+            <span class="pc-line">MIND+</span>
+            <h3 class="pc-name">Mind+ Memory</h3>
+            <p class="pc-desc">Memória e aprendizado · 60 cápsulas</p>
+            <span class="pc-price">R$ 139,90</span>
+          </div>
+        </div>
+
+        <div class="product-card" data-line="mind" onclick="showProduct('mind-calm')">
+          <div class="pc-visual pc--lilac">
+            <img src="images/mind-calm.png" class="pc-img" alt="" onerror="this.style.display='none'" />
+            <div class="product-mock pm--lilac pm--sm">
+              <span class="pm-brand">murilabs</span>
+              <span class="pm-name">MIND+<br>CALM</span>
+            </div>
+          </div>
+          <div class="pc-info">
+            <span class="pc-line">MIND+</span>
+            <h3 class="pc-name">Mind+ Calm</h3>
+            <p class="pc-desc">Relaxamento e equilíbrio · 60 cápsulas</p>
+            <span class="pc-price">R$ 119,90</span>
+          </div>
+        </div>
+
+        <div class="product-card" data-line="mind" onclick="showProduct('mind-drink')">
+          <div class="pc-visual pc--lilac">
+            <img src="images/mind-drink.png" class="pc-img" alt="" onerror="this.style.display='none'" />
+            <div class="product-mock pm--lilac pm--sm">
+              <span class="pm-brand">murilabs</span>
+              <span class="pm-name">MIND+<br>DRINK</span>
+            </div>
+          </div>
+          <div class="pc-info">
+            <span class="pc-line">MIND+</span>
+            <h3 class="pc-name">Mind+ Drink</h3>
+            <p class="pc-desc">Foco e energia mental · 300ml</p>
+            <span class="pc-price">R$ 14,90</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </div>
+  <!-- END PRODUTOS -->
+
+  <!-- ======================== PRODUTO INDIVIDUAL ======================== -->
+  <div id="page-produto" class="page">
+    <div class="product-page-inner">
+      <button class="back-btn" onclick="goBack()">← Voltar</button>
+      <div class="product-detail" id="productDetail">
+        <!-- Filled by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================== SOBRE ======================== -->
+  <div id="page-sobre" class="page">
+
+    <section class="about-hero">
+      <p class="section-label">Sobre a Murilabs</p>
+      <h1 class="about-title">Performance<br>começa pela<br><span>mente.</span></h1>
+    </section>
+
+    <section class="about-content">
+      <div class="about-text-block">
+        <h2>Nossa missão</h2>
+        <p>A Murilabs nasceu da crença de que performance inteligente começa com transparência. Cada fórmula é desenvolvida com ciência aplicada, ingredientes reais e sem excessos — porque o seu corpo merece o melhor, sem complicação.</p>
+      </div>
+      <div class="about-text-block">
+        <h2>Feito no Brasil</h2>
+        <p>Desenvolvemos cada produto para a realidade brasileira. Testado, aprovado e feito com orgulho aqui dentro. Matérias-primas premium, processos rigorosos, resultado que você sente.</p>
+      </div>
+      <div class="about-pillars">
+        <div class="pillar">
+          <span class="pillar-num">01</span>
+          <h3>Ciência</h3>
+          <p>Fórmulas baseadas em evidências, não em tendências.</p>
+        </div>
+        <div class="pillar">
+          <span class="pillar-num">02</span>
+          <h3>Transparência</h3>
+          <p>Você sabe o que coloca no corpo. Sempre.</p>
+        </div>
+        <div class="pillar">
+          <span class="pillar-num">03</span>
+          <h3>Qualidade</h3>
+          <p>Sem corantes. Sem aromas artificiais. Sem excessos.</p>
+        </div>
+        <div class="pillar">
+          <span class="pillar-num">04</span>
+          <h3>Evolução</h3>
+          <p>Inovação constante para um você melhor.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-cta">
+      <h2>Pronto para evoluir?</h2>
+      <button class="btn-primary" onclick="showPage('produtos')">Ver todos os produtos</button>
+    </section>
+
+  </div>
+  <!-- END SOBRE -->
+
+  <!-- ======================== CHECKOUT ======================== -->
+  <div id="page-checkout" class="page">
+    <div class="checkout-container">
+      <button class="back-btn" onclick="showPage('produtos')">← Continuar a comprar</button>
+      <h1 class="checkout-title">Finalizar Compra</h1>
+      <div class="checkout-grid">
+        
+        <div class="checkout-summary">
+          <h2>Resumo do Pedido</h2>
+          <div class="checkout-items-list" id="checkoutItemsList">
+            <!-- filled by JS -->
+          </div>
+          <div class="checkout-coupon">
+            <input type="text" id="couponCode" class="checkout-input" placeholder="Cupom (ex: BORA10)">
+            <button onclick="applyCoupon()">Aplicar</button>
+          </div>
+          <div class="checkout-totals">
+            <div class="tot-row"><span>Subtotal</span><span id="chkSubtotal">R$ 0,00</span></div>
+            <div class="tot-row"><span>Frete</span><span id="chkFrete">Grátis</span></div>
+            <div class="tot-row"><span style="color: var(--green);">Desconto</span><span id="chkDiscount" style="color: var(--green);">R$ 0,00</span></div>
+            <div class="tot-row grand-total"><span>Total</span><span id="chkTotal">R$ 0,00</span></div>
+          </div>
+        </div>
+
+        <div class="checkout-form">
+          <h2>1. Dados Pessoais e Entrega</h2>
+          <div class="form-group">
+            <label>Nome Completo</label>
+            <input type="text" class="checkout-input" placeholder="Seu nome">
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>E-mail</label>
+              <input type="email" class="checkout-input" placeholder="seu@email.com">
+            </div>
+            <div class="form-group">
+              <label>CPF</label>
+              <input type="text" class="checkout-input" placeholder="000.000.000-00">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>CEP</label>
+              <input type="text" class="checkout-input" placeholder="00000-000">
+            </div>
+            <div class="form-group">
+              <label>Endereço</label>
+              <input type="text" class="checkout-input" placeholder="Rua, número, complemento">
+            </div>
+          </div>
+
+          <h2 style="margin-top: 40px;">2. Pagamento</h2>
+          <div class="pay-methods">
+            <label class="pay-method-label">
+              <input type="radio" name="paymethod" value="credito" checked onchange="togglePayMethod()">
+              💳 Cartão
+            </label>
+            <label class="pay-method-label">
+              <input type="radio" name="paymethod" value="pix" onchange="togglePayMethod()">
+              ❖ PIX
+            </label>
+          </div>
+
+          <div id="payCredito">
+            <div class="form-group">
+              <label>Número do Cartão</label>
+              <input type="text" class="checkout-input" placeholder="0000 0000 0000 0000">
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Validade</label>
+                <input type="text" class="checkout-input" placeholder="MM/AA">
+              </div>
+              <div class="form-group">
+                <label>CVV</label>
+                <input type="text" class="checkout-input" placeholder="123">
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Parcelamento</label>
+              <select id="installments" class="checkout-input" style="appearance: auto; cursor: pointer;">
+                <!-- filled by JS -->
+              </select>
+            </div>
+          </div>
+
+          <div id="payPix" style="display:none;">
+            <div class="pix-box">
+              <h3 style="color:var(--text); font-size: 1.2rem;">Pagamento via PIX</h3>
+              <p>O QR Code e o código "Copia e Cola" serão gerados na próxima etapa, após a confirmação.</p>
+              <p style="color: var(--green); font-weight: bold; margin-top: 10px;">Aprovação instantânea!</p>
+            </div>
+          </div>
+
+          <button class="btn-primary w-full" style="margin-top:40px; padding: 20px; font-size: 1rem;" onclick="finishOrderFinal()">Confirmar Pedido →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END CHECKOUT -->
+
+  <!-- CARRINHO SIDEBAR -->
+  <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+  <div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3>O Seu Carrinho</h3>
+      <button class="cart-close" onclick="toggleCart()">&times;</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <!-- Preenchido pelo JS -->
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total-row">
+        <span class="cart-total-label">Total</span>
+        <span class="cart-total-val" id="cartTotalValue">R$ 0,00</span>
+      </div>
+      <button class="btn-primary w-full" onclick="checkout()">Finalizar Compra</button>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="footer-logo">murilabs<span class="dot">.</span></span>
+        <p>Performance inteligente.<br>Ciência aplicada ao seu corpo.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Linhas</h4>
+          <a href="#" onclick="showProductsLine('core')">Core</a>
+          <a href="#" onclick="showProductsLine('next')">Next</a>
+          <a href="#" onclick="showProductsLine('pure')">Pure</a>
+          <a href="#" onclick="showProductsLine('hydrate')">Hydrate</a>
+          <a href="#" onclick="showProductsLine('mind')">Mind+</a>
+        </div>
+        <div class="footer-col">
+          <h4>Empresa</h4>
+          <a href="#" onclick="showPage('sobre')">Sobre</a>
+          <a href="#">Contato</a>
+          <a href="#">Instagram</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Murilabs. Todos os direitos reservados.</span>
+      <span>🇧🇷 Feito no Brasil</span>
+    </div>
+  </footer>
+
+  <script>
+    // ── DATA ───────────────────────────────────────────────────────────────────
+    const products = {
+      'whey-core': {
+        line: 'CORE',
+        name: 'Whey Core',
+        tagline: 'Proteína concentrada do soro do leite para construção muscular eficiente.',
+        size: '900g',
+        serving: '21g',
+        doses: '30',
+        benefits: [
+          { icon: '◎', text: 'Proteína de alto valor biológico' },
+          { icon: '◈', text: 'Perfil completo de aminoácidos essenciais' },
+          { icon: '◇', text: 'Auxilia na recuperação e crescimento muscular' },
+          { icon: '△', text: 'Sem corantes ou aromas artificiais' },
+        ],
+        visual: 'pm--dark',
+        bg: 'pc--dark',
+        bgPage: 'var(--bg)',
+      },
+      'creatine-core': {
+        line: 'CORE',
+        name: 'Creatine Core',
+        tagline: 'Creatina monohidratada 100% pura. Força, desempenho e recuperação.',
+        size: '300g',
+        serving: '3g',
+        doses: '100',
+        benefits: [
+          { icon: '◎', text: '100% creatina monohidratada' },
+          { icon: '◈', text: 'Aumenta força e desempenho nos treinos' },
+          { icon: '◇', text: 'Acelera a recuperação muscular' },
+          { icon: '△', text: 'Sem adição de açúcares' },
+        ],
+        visual: 'pm--dark',
+        bg: 'pc--dark',
+        bgPage: 'var(--bg)',
+      },
+      'pre-ignite': {
+        line: 'CORE',
+        name: 'Pre Ignite',
+        tagline: 'Energia, foco e performance para treinos que exigem o máximo.',
+        size: '300g',
+        serving: '10g',
+        doses: '30',
+        benefits: [
+          { icon: '◎', text: 'Energia explosiva antes do treino' },
+          { icon: '◈', text: 'Foco e clareza mental' },
+          { icon: '◇', text: 'Ingredientes clinicamente dosados' },
+          { icon: '△', text: 'Sabor limão' },
+        ],
+        visual: 'pm--dark',
+        bg: 'pc--dark',
+        bgPage: 'var(--bg)',
+      },
+      'recover-restore': {
+        line: 'CORE',
+        name: 'Recover Restore',
+        tagline: 'Recuperação pós-treino eficiente para evoluir mais rápido.',
+        size: '500g',
+        serving: '16g',
+        doses: '30',
+        benefits: [
+          { icon: '◎', text: 'Reduz dores musculares após o treino' },
+          { icon: '◈', text: 'Acelera a recuperação e reparação' },
+          { icon: '◇', text: 'Vitaminas e minerais essenciais' },
+          { icon: '△', text: 'Sabor uva' },
+        ],
+        visual: 'pm--dark',
+        bg: 'pc--dark',
+        bgPage: 'var(--bg)',
+      },
+      'focus-mind-core': {
+        line: 'CORE',
+        name: 'Focus Mind',
+        tagline: 'Suplemento para foco, memória e clareza mental no dia a dia.',
+        size: '60 cáps',
+        serving: '1000mg',
+        doses: '60',
+        benefits: [
+          { icon: '◎', text: 'Mais foco e concentração' },
+          { icon: '◈', text: 'Apoia a memória e o aprendizado' },
+          { icon: '◇', text: 'Cafeína natural + L-teanina' },
+          { icon: '△', text: 'Uso diário seguro' },
+        ],
+        visual: 'pm--dark',
+        bg: 'pc--dark',
+        bgPage: 'var(--bg)',
+      },
+      'fuel-bar': {
+        line: 'CORE',
+        name: 'Fuel Bar',
+        tagline: 'Barra proteica para matar a fome e manter a energia em movimento.',
+        size: '60g',
+        serving: '12g',
+        doses: '1',
+        benefits: [
+          { icon: '◎', text: '12g de proteína por barra' },
+          { icon: '◈', text: 'Ingredientes reais, sem excessos' },
+          { icon: '◇', text: 'Prático para levar a qualquer lugar' },
+          { icon: '△', text: 'Vários sabores disponíveis' },
+        ],
+        visual: 'pm--dark',
+        bg: 'pc--dark',
+        bgPage: 'var(--bg)',
+      },
+      'whey-next': {
+        line: 'NEXT',
+        name: 'Whey Next',
+        tagline: 'Proteína concentrada para quem está sempre evoluindo.',
+        size: '900g',
+        serving: '21g',
+        doses: '30',
+        benefits: [
+          { icon: '◎', text: '21g de proteína por dose' },
+          { icon: '◈', text: '4,6g de BCAAs naturais' },
+          { icon: '◇', text: 'Low açúcar' },
+          { icon: '△', text: 'Sabor chocolate' },
+        ],
+        visual: 'pm--blue',
+        bg: 'pc--blue',
+        bgPage: 'linear-gradient(135deg, #1E90FF, #0060CC)',
+      },
+      'focus-next': {
+        line: 'NEXT',
+        name: 'Focus Next',
+        tagline: 'Foco e concentração para quem não pode parar.',
+        size: '60 cáps',
+        serving: '500mg',
+        doses: '60',
+        benefits: [
+          { icon: '◎', text: 'Mais atenção e clareza' },
+          { icon: '◈', text: 'Fórmula inteligente com cafeína natural' },
+          { icon: '◇', text: 'Para estudos e trabalho' },
+          { icon: '△', text: 'Uso diário' },
+        ],
+        visual: 'pm--blue',
+        bg: 'pc--blue',
+        bgPage: 'linear-gradient(135deg, #1E90FF, #0060CC)',
+      },
+      'energy-next': {
+        line: 'NEXT',
+        name: 'Energy Next',
+        tagline: 'Energia para o dia todo, com baixo teor de açúcar.',
+        size: 'Pó',
+        serving: '–',
+        doses: '30',
+        benefits: [
+          { icon: '◎', text: 'Energia sustentada ao longo do dia' },
+          { icon: '◈', text: 'Low açúcar, sabor limão' },
+          { icon: '◇', text: 'Vitaminas do complexo B' },
+          { icon: '△', text: 'Pronto para misturar' },
+        ],
+        visual: 'pm--teal',
+        bg: 'pc--teal',
+        bgPage: 'linear-gradient(135deg, #00E0A0, #00B07A)',
+      },
+      'pre-next': {
+        line: 'NEXT',
+        name: 'Pre Next',
+        tagline: 'Pré-treino inteligente para o próximo nível do seu desempenho.',
+        size: '300g',
+        serving: '10g',
+        doses: '30',
+        benefits: [
+          { icon: '◎', text: 'Energia e foco para treinos intensos' },
+          { icon: '◈', text: '2g de creatina por dose' },
+          { icon: '◇', text: 'Beta-alanina para resistência' },
+          { icon: '△', text: 'Sabor tropical' },
+        ],
+        visual: 'pm--purple-dark',
+        bg: 'pc--purple',
+        bgPage: 'linear-gradient(135deg, #7B61FF, #4F3ACC)',
+      },
+      'bar-next': {
+        line: 'NEXT',
+        name: 'Bar Next',
+        tagline: 'Barra de proteína com adição de vitaminas para o dia a dia.',
+        size: '60g',
+        serving: '12g',
+        doses: '1',
+        benefits: [
+          { icon: '◎', text: '12g de proteína por barra' },
+          { icon: '◈', text: 'Com adição de vitaminas' },
+          { icon: '◇', text: 'Sabor cookies & cream' },
+          { icon: '△', text: 'Prático e nutritivo' },
+        ],
+        visual: 'pm--teal',
+        bg: 'pc--teal',
+        bgPage: 'linear-gradient(135deg, #00E0A0, #00B07A)',
+      },
+      'pure-protein': {
+        line: 'PURE',
+        name: 'Pure Protein',
+        tagline: 'Proteína vegetal de alta qualidade, fácil digestão e completa em aminoácidos.',
+        size: '900g',
+        serving: '20g',
+        doses: '30',
+        benefits: [
+          { icon: '◎', text: '100% vegana, sem ingredientes animais' },
+          { icon: '◈', text: 'Fácil digestão e absorção' },
+          { icon: '◇', text: 'Fórmula limpa e transparente' },
+          { icon: '△', text: 'Sabores naturais: baunilha, cacau, coco' },
+        ],
+        visual: 'pm--green',
+        bg: 'pc--green',
+        bgPage: 'linear-gradient(135deg, #4CAF6F, #2E7D4F)',
+      },
+      'pure-creatine': {
+        line: 'PURE',
+        name: 'Pure Creatine',
+        tagline: 'Creatina 100% pura em fórmula vegana. Performance com consciência.',
+        size: '200g',
+        serving: '3g',
+        doses: '66',
+        benefits: [
+          { icon: '◎', text: 'Creatina monohidratada 100% pura' },
+          { icon: '◈', text: 'Fórmula vegana e sustentável' },
+          { icon: '◇', text: 'Embalagem reciclável' },
+          { icon: '△', text: 'Sem adição de aromas ou corantes' },
+        ],
+        visual: 'pm--green',
+        bg: 'pc--green',
+        bgPage: 'linear-gradient(135deg, #4CAF6F, #2E7D4F)',
+      },
+      'pure-daily': {
+        line: 'PURE',
+        name: 'Pure Daily',
+        tagline: 'Multivitamínico vegano para mais saúde e equilíbrio todos os dias.',
+        size: '60 cáps',
+        serving: '1 cáps',
+        doses: '60',
+        benefits: [
+          { icon: '◎', text: 'Vitaminas e minerais essenciais' },
+          { icon: '◈', text: '100% vegano, sem lactose ou glúten' },
+          { icon: '◇', text: 'Ingredientes de origem natural' },
+          { icon: '△', text: 'Uso diário' },
+        ],
+        visual: 'pm--green',
+        bg: 'pc--green',
+        bgPage: 'linear-gradient(135deg, #4CAF6F, #2E7D4F)',
+      },
+      'pure-bar': {
+        line: 'PURE',
+        name: 'Pure Bar',
+        tagline: 'Barra vegana de cacau e avelã. Real, simples, deliciosa.',
+        size: '50g',
+        serving: '10g',
+        doses: '1',
+        benefits: [
+          { icon: '◎', text: '10g de proteína vegetal' },
+          { icon: '◈', text: 'Ingredientes reais e naturais' },
+          { icon: '◇', text: 'Sem corantes ou adoçantes artificiais' },
+          { icon: '△', text: 'Sabor cacau & avelã' },
+        ],
+        visual: 'pm--green',
+        bg: 'pc--green',
+        bgPage: 'linear-gradient(135deg, #4CAF6F, #2E7D4F)',
+      },
+      'hydrate-electrolytes': {
+        line: 'HYDRATE',
+        name: 'Hydrate Electrolytes',
+        tagline: 'Eletrólitos essenciais para manter o corpo em equilíbrio todos os dias.',
+        size: '300g',
+        serving: '10g',
+        doses: '30',
+        benefits: [
+          { icon: '◎', text: 'Sódio, potássio, magnésio e cloreto' },
+          { icon: '◈', text: 'Sem açúcar, baixas calorias' },
+          { icon: '◇', text: '100% vegano, sem corantes' },
+          { icon: '△', text: 'Sabores: limão, frutas vermelhas, natural' },
+        ],
+        visual: 'pm--cyan',
+        bg: 'pc--cyan',
+        bgPage: 'linear-gradient(135deg, #00D4FF, #0098CC)',
+      },
+      'hydrate-energy': {
+        line: 'HYDRATE',
+        name: 'Hydrate Energy',
+        tagline: 'Eletrólitos + energia para treinos e dias intensos.',
+        size: '300g',
+        serving: '10g',
+        doses: '30',
+        benefits: [
+          { icon: '◎', text: 'Eletrólitos + Coenzima Q10 + B12' },
+          { icon: '◈', text: 'Energia extra sem excesso de calorias' },
+          { icon: '◇', text: 'Vegano, sem glúten e sem lactose' },
+          { icon: '△', text: 'Hidratação inteligente' },
+        ],
+        visual: 'pm--cyan',
+        bg: 'pc--cyan',
+        bgPage: 'linear-gradient(135deg, #00D4FF, #0098CC)',
+      },
+      'hydrate-zero': {
+        line: 'HYDRATE',
+        name: 'Hydrate Zero',
+        tagline: 'Eletrólitos essenciais sem sabor e sem açúcar. O mais versátil da linha.',
+        size: '300g',
+        serving: '10g',
+        doses: '30',
+        benefits: [
+          { icon: '◎', text: 'Eletrólitos puros, sem sabor' },
+          { icon: '◈', text: 'Zero açúcar, zero calorias' },
+          { icon: '◇', text: 'Mistura com qualquer bebida' },
+          { icon: '△', text: 'Ideal para hidratação no dia a dia' },
+        ],
+        visual: 'pm--cyan',
+        bg: 'pc--cyan',
+        bgPage: 'linear-gradient(135deg, #00D4FF, #0098CC)',
+      },
+      'hydrate-tablets': {
+        line: 'HYDRATE',
+        name: 'Hydrate Tablets',
+        tagline: 'Eletrólitos em tablet. Leve na bolsa, use em qualquer lugar.',
+        size: '60 tablets',
+        serving: '1 tablet',
+        doses: '60',
+        benefits: [
+          { icon: '◎', text: 'Prático e portátil' },
+          { icon: '◈', text: 'Dissolve rapidamente em água' },
+          { icon: '◇', text: 'Sem corantes artificiais' },
+          { icon: '△', text: 'Eletrólitos essenciais em formato compacto' },
+        ],
+        visual: 'pm--cyan',
+        bg: 'pc--cyan',
+        bgPage: 'linear-gradient(135deg, #00D4FF, #0098CC)',
+      },
+      'hydrate-drink': {
+        line: 'HYDRATE',
+        name: 'Hydrate Drink',
+        tagline: 'Bebida pronta · Eletrólitos · 500ml',
+        size: '500ml',
+        serving: '–',
+        doses: '1',
+        benefits: [
+          { icon: '◎', text: 'Pronto para beber' },
+          { icon: '◈', text: 'Rápida absorção' },
+          { icon: '◇', text: 'Sabor refrescante' },
+          { icon: '△', text: 'Eletrólitos balanceados' },
+        ],
+        visual: 'pm--cyan',
+        bg: 'pc--cyan',
+        bgPage: 'linear-gradient(135deg, #00D4FF, #0098CC)',
+      },
+      'mind-focus': {
+        line: 'MIND+',
+        name: 'Mind+ Focus',
+        tagline: 'Fórmula inteligente para foco, concentração e performance mental.',
+        size: '60 cáps',
+        serving: '2 cáps',
+        doses: '30',
+        benefits: [
+          { icon: '◎', text: 'Cafeína natural + L-teanina + tirosina' },
+          { icon: '◈', text: 'Mais concentração nos estudos e no trabalho' },
+          { icon: '◇', text: 'Vitaminas do complexo B' },
+          { icon: '△', text: 'Para estudantes, profissionais e atletas' },
+        ],
+        visual: 'pm--lilac',
+        bg: 'pc--lilac',
+        bgPage: 'linear-gradient(135deg, #C4ACFF, #9B7CFF)',
+      },
+      'mind-memory': {
+        line: 'MIND+',
+        name: 'Mind+ Memory',
+        tagline: 'Suporte à memória e aprendizado com ingredientes de origem natural.',
+        size: '60 cáps',
+        serving: '2 cáps',
+        doses: '30',
+        benefits: [
+          { icon: '◎', text: 'Fosfatidilserina e Bacopa Monnieri' },
+          { icon: '◈', text: 'Ginkgo Biloba para circulação cerebral' },
+          { icon: '◇', text: 'Melhora retenção e aprendizado' },
+          { icon: '△', text: 'Vitaminas B6 e B12' },
+        ],
+        visual: 'pm--lilac',
+        bg: 'pc--lilac',
+        bgPage: 'linear-gradient(135deg, #C4ACFF, #9B7CFF)',
+      },
+      'mind-calm': {
+        line: 'MIND+',
+        name: 'Mind+ Calm',
+        tagline: 'Relaxamento e equilíbrio para uma mente mais tranquila e focada.',
+        size: '60 cáps',
+        serving: '2 cáps',
+        doses: '30',
+        benefits: [
+          { icon: '◎', text: 'Magnésio + Ashwagandha + L-triptofano' },
+          { icon: '◈', text: 'Controle do estresse e ansiedade' },
+          { icon: '◇', text: 'Apoia o equilíbrio emocional' },
+          { icon: '△', text: 'Vitamina B6 para o sistema nervoso' },
+        ],
+        visual: 'pm--lilac',
+        bg: 'pc--lilac',
+        bgPage: 'linear-gradient(135deg, #C4ACFF, #9B7CFF)',
+      },
+      'mind-drink': {
+        line: 'MIND+',
+        name: 'Mind+ Drink',
+        tagline: 'Foco e energia mental · 300ml',
+        size: '300ml',
+        serving: '–',
+        doses: '1',
+        benefits: [
+          { icon: '◎', text: 'Cafeína natural + L-teanina + taurina' },
+          { icon: '◈', text: 'Energia mental imediata' },
+          { icon: '◇', text: 'Zero açúcar, pronto para beber' },
+          { icon: '△', text: 'Colina para função cognitiva' },
+        ],
+        visual: 'pm--lilac',
+        bg: 'pc--lilac',
+        bgPage: 'linear-gradient(135deg, #C4ACFF, #9B7CFF)',
+      },
+    };
+
+    // Preços
+    const basePrices = {
+      'whey-core': 149.90, 'creatine-core': 89.90, 'pre-ignite': 119.90, 'recover-restore': 129.90,
+      'focus-mind-core': 89.90, 'fuel-bar': 12.90, 'whey-next': 179.90, 'focus-next': 109.90,
+      'energy-next': 139.90, 'pre-next': 159.90, 'bar-next': 14.90, 'pure-protein': 199.90,
+      'pure-creatine': 119.90, 'pure-daily': 79.90, 'pure-bar': 15.90, 'hydrate-electrolytes': 99.90,
+      'hydrate-energy': 109.90, 'hydrate-zero': 89.90, 'hydrate-tablets': 69.90, 'hydrate-drink': 9.90,
+      'mind-focus': 129.90, 'mind-memory': 139.90, 'mind-calm': 119.90, 'mind-drink': 14.90, 'focus-mind': 129.90
+    };
+    for (let key in products) {
+      products[key].priceVal = basePrices[key] || 149.90;
+      products[key].priceStr = `R$ ${products[key].priceVal.toFixed(2).replace('.', ',')}`;
+    }
+
+    // State
+    let currentPage = 'home';
+    let previousPage = 'home';
+
+    // Nav
+    function showPage(pageId) {
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      const target = document.getElementById('page-' + pageId);
+      if (target) {
+        target.classList.add('active');
+        previousPage = currentPage;
+        currentPage = pageId;
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+      document.getElementById('mobileMenu').classList.remove('open');
+    }
+
+    function showProductsLine(lineId) {
+      showPage('produtos');
+      setTimeout(() => {
+        const btn = document.querySelector(`.filter-btn[data-filter="${lineId}"]`);
+        if (btn) filterProducts(btn, lineId);
+      }, 100);
+    }
+
+    function goBack() { showPage(previousPage === 'produto' ? 'produtos' : previousPage); }
+    function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open'); }
+
+    function scrollFeatured(direction) {
+      const grid = document.getElementById('featuredGridCarousel');
+      if(grid) {
+        const card = grid.querySelector('.featured-card');
+        const scrollAmount = (card.offsetWidth + 16) * 2;
+        grid.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+      }
+    }
+
+    function filterProducts(btn, filter) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const label = document.getElementById('products-line-label');
+      if (filter === 'all') label.textContent = 'Todos os produtos';
+      else {
+        const names = { core: 'Linha Core', next: 'Linha Next', pure: 'Linha Pure', hydrate: 'Linha Hydrate', mind: 'Linha Mind+' };
+        label.textContent = names[filter] || 'Todos os produtos';
+      }
+      document.querySelectorAll('.product-card').forEach(card => {
+        const line = card.getAttribute('data-line');
+        if (filter === 'all' || line === filter) card.classList.remove('hidden');
+        else card.classList.add('hidden');
+      });
+    }
+
+    function showProduct(productId) {
+      const p = products[productId];
+      if (!p) return;
+      previousPage = currentPage;
+      const detail = document.getElementById('productDetail');
+      detail.innerHTML = `
+        <div class="pd-visual ${p.bg}" style="background: ${p.bgPage}; position: relative;">
+          <img src="images/${productId}.png" class="pd-img" alt="${p.name}" onerror="this.style.display='none'" />
+          <div class="product-mock ${p.visual}" style="z-index:1;">
+            <span class="pm-brand">murilabs</span>
+            <span class="pm-name">${p.name.toUpperCase()}</span>
+            <span class="pm-size">${p.size}</span>
+          </div>
+        </div>
+        <div class="pd-content">
+          <p class="pd-line">${p.line}</p>
+          <h1 class="pd-name">${p.name}</h1>
+          <p class="pd-tagline">${p.tagline}</p>
+          <div class="pd-meta">
+            <div class="pd-meta-item"><span class="pd-meta-val">${p.size}</span><span class="pd-meta-key">Tamanho</span></div>
+            <div class="pd-meta-item"><span class="pd-meta-val">${p.serving}</span><span class="pd-meta-key">Por dose</span></div>
+            <div class="pd-meta-item"><span class="pd-meta-val">${p.doses}</span><span class="pd-meta-key">Doses</span></div>
+          </div>
+          <div class="pd-benefits">
+            ${p.benefits.map(b => `<div class="pd-benefit"><div class="pd-benefit-icon">${b.icon}</div><span class="pd-benefit-text">${b.text}</span></div>`).join('')}
+          </div>
+          <div class="pd-cta">
+            <div class="pd-price-block"><span class="pd-price-label">Preço</span><span class="pd-price">${p.priceStr}</span></div>
+            <button class="btn-primary" onclick="addToCart('${productId}')">Comprar agora</button>
+            <button class="btn-ghost" onclick="showPage('produtos')">Ver todos os produtos</button>
+          </div>
+        </div>
+      `;
+      showPage('produto');
+    }
+
+    window.addEventListener('scroll', () => {
+      const nav = document.getElementById('nav');
+      if (window.scrollY > 20) nav.style.boxShadow = '0 2px 20px rgba(0,0,0,0.08)';
+      else nav.style.boxShadow = 'none';
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 850) document.getElementById('mobileMenu').classList.remove('open');
+    });
+
+    let cart = [];
+    function toggleCart() {
+      document.getElementById('cartOverlay').classList.toggle('open');
+      document.getElementById('cartSidebar').classList.toggle('open');
+    }
+    function addToCart(productId) {
+      const product = products[productId];
+      if (!product) return;
+      const existingItem = cart.find(item => item.id === productId);
+      if (existingItem) existingItem.qty += 1;
+      else cart.push({ id: productId, name: product.name, price: product.priceVal, qty: 1, bg: product.bgPage || 'var(--surface)' });
+      updateCartUI();
+      if (!document.getElementById('cartSidebar').classList.contains('open')) toggleCart();
+    }
+    function updateItemQty(productId, change) {
+      const item = cart.find(i => i.id === productId);
+      if (item) {
+        item.qty += change;
+        if (item.qty <= 0) cart = cart.filter(i => i.id !== productId);
+      }
+      updateCartUI();
+    }
+    function updateCartUI() {
+      const cartItemsContainer = document.getElementById('cartItems');
+      const cartCountEl = document.getElementById('navCartCount');
+      const cartTotalEl = document.getElementById('cartTotalValue');
+      cartItemsContainer.innerHTML = '';
+      let total = 0, count = 0;
+      if (cart.length === 0) {
+        cartItemsContainer.innerHTML = '<p style="color: var(--text-2); text-align: center; margin-top: 40px;">O seu carrinho está vazio.</p>';
+      } else {
+        cart.forEach(item => {
+          total += item.price * item.qty;
+          count += item.qty;
+          const itemEl = document.createElement('div');
+          itemEl.className = 'cart-item';
+          itemEl.innerHTML = `
+            <div class="cart-item-img" style="background: ${item.bg};"></div>
+            <div class="cart-item-info">
+              <span class="cart-item-title">${item.name}</span>
+              <span class="cart-item-price">R$ ${item.price.toFixed(2).replace('.', ',')}</span>
+              <div class="cart-item-qty">
+                <button class="cart-qty-btn" onclick="updateItemQty('${item.id}', -1)">-</button>
+                <span class="cart-qty-val">${item.qty}</span>
+                <button class="cart-qty-btn" onclick="updateItemQty('${item.id}', 1)">+</button>
+              </div>
+            </div>
+          `;
+          cartItemsContainer.appendChild(itemEl);
+        });
+      }
+      cartCountEl.textContent = count;
+      cartTotalEl.textContent = `R$ ${total.toFixed(2).replace('.', ',')}`;
+    }
+
+    function checkout() {
+      if (cart.length === 0) return alert('O seu carrinho está vazio!');
+      toggleCart();
+      showPage('checkout');
+      updateCheckoutUI();
+    }
+
+    let checkoutDiscount = 0;
+    function updateCheckoutUI() {
+      const listEl = document.getElementById('checkoutItemsList');
+      const subEl = document.getElementById('chkSubtotal');
+      const discEl = document.getElementById('chkDiscount');
+      const totalEl = document.getElementById('chkTotal');
+      const installEl = document.getElementById('installments');
+      listEl.innerHTML = '';
+      let subtotal = 0;
+      cart.forEach(item => {
+        subtotal += item.price * item.qty;
+        listEl.innerHTML += `
+          <div class="checkout-item">
+            <div style="display:flex; flex-direction:column; gap:4px;">
+              <span class="checkout-item-name">${item.name}</span>
+              <span class="checkout-item-qty">Qtd: ${item.qty}</span>
+            </div>
+            <span class="checkout-item-price">R$ ${(item.price * item.qty).toFixed(2).replace('.', ',')}</span>
+          </div>`;
+      });
+      const total = Math.max(0, subtotal - checkoutDiscount);
+      subEl.textContent = `R$ ${subtotal.toFixed(2).replace('.', ',')}`;
+      discEl.textContent = checkoutDiscount > 0 ? `- R$ ${checkoutDiscount.toFixed(2).replace('.', ',')}` : `R$ 0,00`;
+      totalEl.textContent = `R$ ${total.toFixed(2).replace('.', ',')}`;
+      if (installEl) {
+        installEl.innerHTML = '';
+        for (let i = 1; i <= 6; i++) {
+          const valParcela = total / i;
+          installEl.innerHTML += `<option value="${i}">${i}x de R$ ${valParcela.toFixed(2).replace('.', ',')} ${i===1?'(Sem juros)':''}</option>`;
+        }
+      }
+    }
+
+    function applyCoupon() {
+      const code = document.getElementById('couponCode').value.toUpperCase();
+      let subtotal = cart.reduce((acc, item) => acc + (item.price * item.qty), 0);
+      if (code === 'BORA10') { checkoutDiscount = subtotal * 0.10; alert('Cupom de 10% aplicado com sucesso!'); }
+      else if (code === 'MURILABS20') { checkoutDiscount = subtotal * 0.20; alert('Cupom de 20% aplicado com sucesso!'); }
+      else { checkoutDiscount = 0; alert('Cupom inválido ou expirado.'); }
+      updateCheckoutUI();
+    }
+
+    function togglePayMethod() {
+      const method = document.querySelector('input[name="paymethod"]:checked').value;
+      document.getElementById('payCredito').style.display = method === 'credito' ? 'block' : 'none';
+      document.getElementById('payPix').style.display = method === 'pix' ? 'block' : 'none';
+    }
+
+    function finishOrderFinal() {
+      if (cart.length === 0) return alert('Ocorreu um erro: Carrinho vazio.');
+      alert('🎉 Pedido confirmado com sucesso! Obrigado por comprar na Murilabs. (Isto é apenas uma demonstração)');
+      cart = []; checkoutDiscount = 0; updateCartUI(); showPage('home'); window.scrollTo(0,0);
+    }
+
+    updateCartUI();
+
+    // ── Scroll Showcase ─────────────────────────────────────────────────────────
+
+    // ── Lines Showcase — IntersectionObserver ───────────────────────────────
+    (function() {
+      const blocks = document.querySelectorAll('.ls-block');
+      if (!blocks.length) return;
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+          }
+        });
+      }, {
+        threshold: 0.15,
+      });
+
+      blocks.forEach(block => observer.observe(block));
+    })();
+
+  </script>
+</body>
+</html>
